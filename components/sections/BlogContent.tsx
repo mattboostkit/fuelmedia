@@ -8,7 +8,7 @@ import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/client'
 import { formatDate } from '@/lib/utils'
 import { useState } from 'react'
-import { BlogPost, Category, SanityImage } from '@/types/sanity'
+import { BlogPost, Category } from '@/types/sanity'
 
 interface BlogContentProps {
   posts: BlogPost[]
