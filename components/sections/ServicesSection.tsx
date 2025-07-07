@@ -9,7 +9,7 @@ const services = [
     icon: FileSearch,
     title: 'Media Audits',
     description: 'Comprehensive financial media audits that uncover inefficiencies, optimize contracts, and deliver significant commercial improvements.',
-    gradient: 'from-flame-orange to-flame-red',
+    gradient: 'from-primary to-secondary-pink',
   },
   {
     icon: TrendingUp,
@@ -27,7 +27,7 @@ const services = [
     icon: BarChart3,
     title: 'Performance Reviews',
     description: 'Data-driven performance frameworks that measure effectiveness, identify opportunities, and drive continuous improvement.',
-    gradient: 'from-secondary-pink to-flame-yellow',
+    gradient: 'from-secondary-pink to-primary',
   },
 ]
 
@@ -48,7 +48,7 @@ export function ServicesSection() {
           <AnimatedText
             variant="fadeIn"
             delay={0.2}
-            className="text-xl text-white/60 max-w-2xl mx-auto"
+            className="text-xl text-gray-600 dark:text-white/60 max-w-2xl mx-auto"
           >
             Strategic insight and commercial excellence that transforms your media investment into competitive advantage
           </AnimatedText>
@@ -69,8 +69,8 @@ export function ServicesSection() {
                 >
                   <service.icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-2xl font-bebas mb-3 text-white">{service.title}</h3>
-                <p className="text-white/60">{service.description}</p>
+                <h3 className="text-2xl font-bebas mb-3 text-gray-900 dark:text-white">{service.title}</h3>
+                <p className="text-gray-600 dark:text-white/60">{service.description}</p>
               </Card>
             </motion.div>
           ))}

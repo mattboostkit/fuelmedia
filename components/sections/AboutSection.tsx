@@ -35,7 +35,7 @@ const differentiators = [
 export function AboutSection() {
   return (
     <section className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/10 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-primary/10 to-gray-50 dark:from-black dark:via-primary/10 dark:to-black" />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -51,7 +51,7 @@ export function AboutSection() {
           <AnimatedText
             variant="fadeIn"
             delay={0.2}
-            className="text-xl text-white/80 max-w-3xl mx-auto"
+            className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto"
           >
             We give advertisers a competitive advantage through five key differentiators that set us apart
           </AnimatedText>
@@ -68,13 +68,13 @@ export function AboutSection() {
               className="flex gap-4"
             >
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-flame-orange to-flame-red flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-primary to-secondary-pink flex items-center justify-center">
                   <item.icon className="text-white" size={24} />
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bebas mb-2 text-white">{item.title}</h3>
-                <p className="text-white/60">{item.description}</p>
+                <h3 className="text-xl font-bebas mb-2 text-gray-900 dark:text-white">{item.title}</h3>
+                <p className="text-gray-600 dark:text-white/60">{item.description}</p>
               </div>
             </motion.div>
           ))}

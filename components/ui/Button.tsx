@@ -9,10 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-gradient-to-r from-flame-orange to-flame-red text-white hover:shadow-[0_0_30px_rgba(255,107,53,0.5)] hover:scale-105',
-        secondary: 'bg-gradient-to-r from-primary to-secondary-blue text-white hover:shadow-[0_0_30px_rgba(102,36,129,0.5)] hover:scale-105',
-        ghost: 'bg-transparent text-white hover:bg-white/10 border border-white/20 hover:border-white/40',
-        flame: 'relative px-8 py-4 bg-gradient-to-r from-flame-orange to-flame-red text-white font-bold rounded-lg overflow-hidden group hover:shadow-[0_0_30px_rgba(255,107,53,0.5)] transition-all duration-300',
+        primary: 'bg-gradient-to-r from-primary to-secondary-pink text-white hover:shadow-[0_0_30px_rgba(102,36,129,0.5)] hover:scale-105',
+        secondary: 'bg-gradient-to-r from-secondary-blue to-secondary-pink text-white hover:shadow-[0_0_30px_rgba(2,159,224,0.5)] hover:scale-105',
+        ghost: 'bg-transparent text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 border border-gray-300 dark:border-white/20 hover:border-gray-400 dark:hover:border-white/40',
+        flame: 'relative px-8 py-4 bg-gradient-to-r from-primary via-secondary-pink to-secondary-blue text-white font-bold rounded-lg overflow-hidden group hover:shadow-[0_0_30px_rgba(230,6,124,0.5)] transition-all duration-300',
       },
       size: {
         sm: 'px-4 py-2 text-sm',
@@ -43,7 +43,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {variant === 'flame' && (
-          <div className="absolute inset-0 bg-gradient-to-r from-flame-yellow to-flame-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary-blue via-primary to-secondary-pink opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         )}
         <span className={cn(variant === 'flame' && 'relative z-10', isLoading && 'opacity-0')}>
           {children}

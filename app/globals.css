@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 :root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --primary: #662481;
+  --secondary-blue: #029fe0;
+  --secondary-pink: #e6067c;
+}
+
+.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
 }
@@ -43,7 +51,7 @@
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(to right, theme('colors.flame.orange'), theme('colors.flame.red'), theme('colors.flame.yellow'));
+    background: linear-gradient(135deg, #662481, #e6067c, #029fe0);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -64,8 +72,16 @@
   }
 
   .glass-effect {
-    @apply backdrop-blur-lg border border-white/10;
+    @apply backdrop-blur-lg border;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(102, 36, 129, 0.1);
+  }
+  
+  .dark .glass-effect {
     background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
   }
 
   .hover-flame {

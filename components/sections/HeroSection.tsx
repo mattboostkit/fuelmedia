@@ -4,11 +4,12 @@ import { motion } from 'framer-motion'
 import { Button, AnimatedText } from '@/components/ui'
 import { ArrowRight, Flame } from 'lucide-react'
 import { ParticleBackground } from './ParticleBackground'
+import Link from 'next/link'
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-primary/20 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary-pink/5 to-secondary-blue/5" />
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -24,7 +25,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8"
           >
             <Flame className="text-flame-orange animate-flame" size={20} />
-            <span className="text-sm text-white/80">Media Audit Specialists</span>
+            <span className="text-sm text-gray-700 dark:text-white/80">Media Audit Specialists</span>
           </motion.div>
 
           <h1 className="mb-6">
@@ -32,7 +33,7 @@ export function HeroSection() {
               Transform Your Media
             </AnimatedText>
             <br />
-            <AnimatedText variant="slideUp" delay={0.3} className="text-white">
+            <AnimatedText variant="slideUp" delay={0.3} className="text-gray-900 dark:text-white">
               Investment
             </AnimatedText>
           </h1>
@@ -40,7 +41,7 @@ export function HeroSection() {
           <AnimatedText
             variant="fadeIn"
             delay={0.6}
-            className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-600 dark:text-white/80 mb-8 max-w-3xl mx-auto"
           >
             Expert media auditing that delivers commercial advantage through strategic insight, negotiation excellence, and performance optimization
           </AnimatedText>
@@ -51,10 +52,12 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.9 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button variant="flame" size="lg" className="group">
-              Request Media Audit
-              <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-            </Button>
+            <Link href="/contact">
+              <Button variant="flame" size="lg" className="group">
+                Request Media Audit
+                <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+              </Button>
+            </Link>
             <Button variant="ghost" size="lg">
               View Our Results
             </Button>

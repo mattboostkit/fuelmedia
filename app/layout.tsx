@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { Navigation, Footer } from "@/components/ui";
+import { DarkModeToggle } from "@/components/ui/DarkModeToggle";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <DarkModeToggle />
       </body>
     </html>
   );

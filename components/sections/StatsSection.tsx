@@ -58,7 +58,7 @@ export function StatsSection() {
           <h2 className="text-4xl md:text-5xl font-bebas mb-4">
             <span className="gradient-text">Proven Results</span> That Matter
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
             Over the past 24 months, we have delivered impressive results for our clients, 
             transforming their media investments into competitive advantage
           </p>
@@ -74,9 +74,9 @@ export function StatsSection() {
               className="text-center"
             >
               <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-              <p className="text-white font-medium mt-2">{stat.label}</p>
+              <p className="text-gray-900 dark:text-white font-medium mt-2">{stat.label}</p>
               {stat.sublabel && (
-                <p className="text-white/60 text-sm mt-1">{stat.sublabel}</p>
+                <p className="text-gray-600 dark:text-white/60 text-sm mt-1">{stat.sublabel}</p>
               )}
             </motion.div>
           ))}
