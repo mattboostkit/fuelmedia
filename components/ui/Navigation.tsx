@@ -46,7 +46,7 @@ export function Navigation() {
               className="text-2xl font-bebas tracking-wider"
             >
               <span className="gradient-text">FUEL</span>
-              <span className="text-white group-hover:text-flame-orange transition-colors">
+              <span className="text-gray-900 dark:text-white group-hover:text-flame-orange transition-colors">
                 {' '}MEDIA
               </span>
             </motion.div>
@@ -57,7 +57,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-white transition-colors relative group"
+                className="text-gray-700 dark:text-white/80 hover:text-gray-900 dark:hover:text-white transition-colors relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-flame-orange to-flame-red group-hover:w-full transition-all duration-300" />
@@ -70,7 +70,7 @@ export function Navigation() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white hover:text-flame-orange transition-colors"
+            className="md:hidden text-gray-900 dark:text-white hover:text-flame-orange transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -92,7 +92,7 @@ export function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-3 text-white/80 hover:text-white transition-colors"
+                  className="block py-3 text-gray-700 dark:text-white/80 hover:text-gray-900 dark:hover:text-white transition-colors"
                 >
                   {link.label}
                 </Link>

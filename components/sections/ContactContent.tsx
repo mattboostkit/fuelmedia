@@ -79,7 +79,7 @@ export function ContactContent() {
             <AnimatedText
               variant="fadeIn"
               delay={0.2}
-              className="text-xl text-white/80 max-w-3xl mx-auto"
+              className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto"
             >
               Ready to transform your brand? Get in touch and let&apos;s create marketing magic together
             </AnimatedText>
@@ -92,14 +92,14 @@ export function ContactContent() {
               transition={{ duration: 0.6 }}
             >
               <Card className="h-full">
-                <h2 className="text-3xl font-bebas mb-6 text-white">Send Us a Message</h2>
+                <h2 className="text-3xl font-bebas mb-6 text-gray-900 dark:text-white">Send Us a Message</h2>
                 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div>
                     <input
                       {...register('name', { required: 'Name is required' })}
                       placeholder="Your Name"
-                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
                     />
                     {errors.name && (
                       <p className="mt-1 text-sm text-flame-orange">{errors.name.message}</p>
@@ -116,7 +116,7 @@ export function ContactContent() {
                         },
                       })}
                       placeholder="Your Email"
-                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
                     />
                     {errors.email && (
                       <p className="mt-1 text-sm text-flame-orange">{errors.email.message}</p>
@@ -127,7 +127,7 @@ export function ContactContent() {
                     <input
                       {...register('company')}
                       placeholder="Company (Optional)"
-                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
                     />
                   </div>
 
@@ -136,7 +136,7 @@ export function ContactContent() {
                       {...register('message', { required: 'Message is required' })}
                       placeholder="Tell us about your project"
                       rows={4}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors resize-none"
                     />
                     {errors.message && (
                       <p className="mt-1 text-sm text-flame-orange">{errors.message.message}</p>
@@ -164,7 +164,7 @@ export function ContactContent() {
               className="space-y-6"
             >
               <div>
-                <h3 className="text-2xl font-bebas mb-6 text-white">Get in Touch</h3>
+                <h3 className="text-2xl font-bebas mb-6 text-gray-900 dark:text-white">Get in Touch</h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <motion.a
@@ -179,8 +179,8 @@ export function ContactContent() {
                         <info.icon className="text-white" size={24} />
                       </div>
                       <div>
-                        <h4 className="font-bebas text-xl text-white mb-1">{info.title}</h4>
-                        <p className="text-white/60">{info.content}</p>
+                        <h4 className="font-bebas text-xl text-gray-900 dark:text-white mb-1">{info.title}</h4>
+                        <p className="text-gray-700 dark:text-white/60">{info.content}</p>
                       </div>
                     </motion.a>
                   ))}
@@ -188,7 +188,7 @@ export function ContactContent() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bebas mb-6 text-white">Frequently Asked Questions</h3>
+                <h3 className="text-2xl font-bebas mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h3>
                 <div className="space-y-3">
                   {faqs.map((faq, index) => (
                     <motion.div
@@ -202,13 +202,13 @@ export function ContactContent() {
                         className="w-full text-left p-4 rounded-lg glass-effect hover:border-flame-orange/50 transition-all duration-300"
                       >
                         <div className="flex justify-between items-center">
-                          <h4 className="text-white font-medium">{faq.question}</h4>
+                          <h4 className="text-gray-900 dark:text-white font-medium">{faq.question}</h4>
                           <span className="text-flame-orange text-2xl">
                             {expandedFaq === index ? '−' : '+'}
                           </span>
                         </div>
                         {expandedFaq === index && (
-                          <p className="mt-3 text-white/60">{faq.answer}</p>
+                          <p className="mt-3 text-gray-700 dark:text-white/60">{faq.answer}</p>
                         )}
                       </button>
                     </motion.div>

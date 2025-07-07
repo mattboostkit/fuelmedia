@@ -45,7 +45,7 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
             <AnimatedText
               variant="fadeIn"
               delay={0.2}
-              className="text-xl text-white/80 max-w-3xl mx-auto"
+              className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto"
             >
               Insights, trends, and strategies to fuel your brand&apos;s growth
             </AnimatedText>
@@ -65,19 +65,19 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
                     placeholder="Search articles..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
                   />
                 </div>
 
                 <div>
-                  <h3 className="font-bebas text-xl mb-4 text-white">Categories</h3>
+                  <h3 className="font-bebas text-xl mb-4 text-gray-900 dark:text-white">Categories</h3>
                   <div className="space-y-2">
                     <button
                       onClick={() => setSelectedCategory(null)}
                       className={`block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
                         !selectedCategory
                           ? 'bg-gradient-to-r from-flame-orange to-flame-red text-white'
-                          : 'text-white/60 hover:text-white hover:bg-white/10'
+                          : 'text-gray-700 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10'
                       }`}
                     >
                       All Posts
@@ -89,7 +89,7 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
                         className={`block w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
                           selectedCategory === category._id
                             ? 'bg-gradient-to-r from-flame-orange to-flame-red text-white'
-                            : 'text-white/60 hover:text-white hover:bg-white/10'
+                            : 'text-gray-700 dark:text-white/60 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10'
                         }`}
                       >
                         {category.title}
