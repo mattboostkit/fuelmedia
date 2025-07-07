@@ -8,3 +8,8 @@
 [build.environment]
   NEXT_PUBLIC_SANITY_PROJECT_ID = "jegkcud6"
   NEXT_PUBLIC_SANITY_DATASET = "production"
+
+[[redirects]]
+  from = "/studio/*"
+  to = "/studio/:splat"
+  status = 200

@@ -40,16 +40,18 @@ export function Navigation() {
     >
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="group">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bebas tracking-wider"
-            >
-              <span className="gradient-text">FUEL</span>
-              <span className="text-gray-900 dark:text-white group-hover:text-flame-orange transition-colors">
-                {' '}MEDIA
-              </span>
-            </motion.div>
+          <Link href="/" className="group flex items-center">
+            <span className="sr-only">Fuel Media Home</span>
+            <img
+              src="https://ik.imagekit.io/boostkit/Fuel%20Media%20and%20Marketing/Fuel_Logo.svg?updatedAt=1751799590441"
+              alt="Fuel Media Logo"
+              className="h-10 w-auto dark:hidden"
+            />
+            <img
+              src="https://ik.imagekit.io/boostkit/Fuel%20Media%20and%20Marketing/Logo_White_Fade%20(Large).png?updatedAt=1751799623208"
+              alt="Fuel Media Logo White"
+              className="h-10 w-auto hidden dark:block"
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

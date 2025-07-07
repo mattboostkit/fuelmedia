@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from './Button'
-import { Facebook, Twitter, Linkedin, Instagram, Mail } from 'lucide-react'
+import { Linkedin, Mail } from 'lucide-react'
 
 const footerLinks = {
   company: [
@@ -18,38 +18,42 @@ const footerLinks = {
   legal: [] as Array<{ href: string; label: string }>,
 }
 
-const socialLinks = [
-  { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-]
-
 export function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
-            <div className="mb-6">
-              <span className="text-3xl font-bebas tracking-wider gradient-text">
-                FUEL MEDIA
-              </span>
+            <div className="mb-6 flex items-center">
+              <img
+                src="https://ik.imagekit.io/boostkit/Fuel%20Media%20and%20Marketing/Fuel_Logo.svg?updatedAt=1751799590441"
+                alt="Fuel Media Logo"
+                className="h-10 w-auto block dark:hidden"
+              />
+              <img
+                src="https://ik.imagekit.io/boostkit/Fuel%20Media%20and%20Marketing/Logo_White_Fade%20(Large).png?updatedAt=1751799623208"
+                alt="Fuel Media Logo White"
+                className="h-10 w-auto hidden dark:block"
+              />
             </div>
             <p className="text-white/60 mb-6 max-w-sm">
               Expert media audit specialists delivering transparency, accountability, and commercial excellence.
             </p>
+            {/* Contact Info */}
+            <div className="mb-6 space-y-1">
+              <p className="text-white/80 text-sm"><strong>Phone:</strong> <a href="tel:+447700155848" className="hover:text-flame-orange transition-colors">+44(0) 7700 155848</a></p>
+              <p className="text-white/80 text-sm"><strong>Email:</strong> <a href="mailto:oli@fuelmediamarketing.com" className="hover:text-flame-orange transition-colors">oli@fuelmediamarketing.com</a></p>
+              <p className="text-white/80 text-sm"><strong>Address:</strong> 3rd Floor, 86-90 Paul St, London EC2A 4NE</p>
+            </div>
             <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-lg glass-effect flex items-center justify-center text-white/60 hover:text-white hover:flame-shadow transition-all duration-300"
-                >
-                  <social.icon size={20} />
-                </a>
-              ))}
+              <a
+                href="https://www.linkedin.com/company/fuel-media-marketing/posts/?feedView=all"
+                aria-label="LinkedIn"
+                className="w-10 h-10 rounded-lg glass-effect flex items-center justify-center text-[#0A66C2] bg-white hover:bg-[#0A66C2] hover:text-white hover:flame-shadow transition-all duration-300 border border-[#0A66C2]/30"
+                target="_blank" rel="noopener noreferrer"
+              >
+                <Linkedin size={24} />
+              </a>
             </div>
           </div>
 
@@ -73,7 +77,7 @@ export function Footer() {
             <h3 className="font-bebas text-xl mb-4 text-white">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-white/60 hover:text-white transition-colors"

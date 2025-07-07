@@ -15,22 +15,22 @@ type FormData = {
 
 const contactInfo = [
   {
-    icon: Mail,
-    title: 'Email',
-    content: 'hello@fuelmedia.com',
-    link: 'mailto:hello@fuelmedia.com',
-  },
-  {
     icon: Phone,
     title: 'Phone',
-    content: '+1 (555) 123-4567',
-    link: 'tel:+15551234567',
+    content: '+44(0) 7700 155848',
+    link: 'tel:+447700155848',
+  },
+  {
+    icon: Mail,
+    title: 'Email',
+    content: 'oli@fuelmediamarketing.com',
+    link: 'mailto:oli@fuelmediamarketing.com',
   },
   {
     icon: MapPin,
-    title: 'Office',
-    content: '123 Innovation Drive, Tech City, TC 12345',
-    link: '#',
+    title: 'Address',
+    content: '3rd Floor, 86-90 Paul St, London EC2A 4NE',
+    link: 'https://goo.gl/maps/2Qw6Qw6Qw6Qw6Qw6A',
   },
 ]
 
@@ -167,6 +167,18 @@ export function ContactContent() {
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
+              <div className="flex justify-center mb-6">
+                <img
+                  src="https://ik.imagekit.io/boostkit/Fuel%20Media%20and%20Marketing/Fuel_Logo.svg?updatedAt=1751799590441"
+                  alt="Fuel Media Logo"
+                  className="h-16 w-auto dark:hidden"
+                />
+                <img
+                  src="https://ik.imagekit.io/boostkit/Fuel%20Media%20and%20Marketing/Logo_White_Fade%20(Large).png?updatedAt=1751799623208"
+                  alt="Fuel Media Logo White"
+                  className="h-16 w-auto hidden dark:block"
+                />
+              </div>
               <div>
                 <h3 className="font-bebas mb-6 text-gray-900 dark:text-white">Get in Touch</h3>
                 <div className="space-y-4">

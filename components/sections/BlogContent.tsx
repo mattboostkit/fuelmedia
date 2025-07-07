@@ -121,47 +121,49 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
                               fill
                               className="object-cover group-hover:scale-105 transition-transform duration-300"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-flame-orange/80 via-flame-red/60 to-transparent" />
                           </div>
                         )}
                         
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {post.categories?.map((category) => (
-                            <span
-                              key={category._id}
-                              className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/70"
-                            >
-                              {category.title}
-                            </span>
-                          ))}
-                        </div>
+                        <div className="relative z-10 bg-gradient-to-br from-flame-orange/90 via-flame-red/80 to-black/60 rounded-xl p-4 -mt-8 mb-2 shadow-lg">
+                          <div className="flex flex-wrap gap-2 mb-3">
+                            {post.categories?.map((category) => (
+                              <span
+                                key={category._id}
+                                className="px-3 py-1 text-xs rounded-full bg-white/20 text-white/90 font-semibold shadow-sm"
+                              >
+                                {category.title}
+                              </span>
+                            ))}
+                          </div>
 
-                        <h3 className="font-bebas mb-3 text-white group-hover:text-flame-orange transition-colors">
-                          {post.title}
-                        </h3>
-                        
-                        {post.excerpt && (
-                          <p className="text-white/60 mb-4 line-clamp-3">{post.excerpt}</p>
-                        )}
-                        
-                        <div className="flex items-center justify-between text-sm text-white/40">
-                          <div className="flex items-center gap-4">
-                            {post.author && (
-                              <div className="flex items-center gap-2">
-                                <User size={16} />
-                                <span>{post.author.name}</span>
-                              </div>
-                            )}
-                            <div className="flex items-center gap-2">
-                              <Calendar size={16} />
-                              <span>{formatDate(post.publishedAt)}</span>
-                            </div>
-                          </div>
+                          <h3 className="font-bebas mb-3 text-white group-hover:text-flame-yellow transition-colors drop-shadow-md">
+                            {post.title}
+                          </h3>
                           
-                          <ArrowRight
-                            size={20}
-                            className="group-hover:translate-x-1 transition-transform"
-                          />
+                          {post.excerpt && (
+                            <p className="text-white/90 mb-4 line-clamp-3 drop-shadow-md font-medium">{post.excerpt}</p>
+                          )}
+                          
+                          <div className="flex items-center justify-between text-sm text-white/80">
+                            <div className="flex items-center gap-4">
+                              {post.author && (
+                                <div className="flex items-center gap-2">
+                                  <User size={16} />
+                                  <span>{post.author.name}</span>
+                                </div>
+                              )}
+                              <div className="flex items-center gap-2">
+                                <Calendar size={16} />
+                                <span>{formatDate(post.publishedAt)}</span>
+                              </div>
+                            </div>
+                            
+                            <ArrowRight
+                              size={20}
+                              className="group-hover:translate-x-1 transition-transform"
+                            />
+                          </div>
                         </div>
                       </Card>
                     </Link>

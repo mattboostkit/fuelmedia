@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(npx @sanity/mcp-server@latest:*)",
+      "Bash(rg:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}

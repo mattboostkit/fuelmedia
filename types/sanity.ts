@@ -38,6 +38,14 @@ export interface BlogPost {
   body?: any[]
 }
 
+export interface CodeBlock {
+  _type: 'codeBlock'
+  _key: string
+  language?: string
+  code: string
+  filename?: string
+}
+
 export interface PortableTextBlock {
   _type: 'block'
   _key: string

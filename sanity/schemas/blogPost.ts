@@ -123,18 +123,55 @@ export default defineType({
           ],
         },
         {
-          type: 'code',
-          options: {
-            language: 'javascript',
-            languageAlternatives: [
-              { title: 'JavaScript', value: 'javascript' },
-              { title: 'TypeScript', value: 'typescript' },
-              { title: 'HTML', value: 'html' },
-              { title: 'CSS', value: 'css' },
-              { title: 'Python', value: 'python' },
-              { title: 'JSON', value: 'json' },
-            ],
-            withFilename: true,
+          type: 'object',
+          name: 'codeBlock',
+          title: 'Code Block',
+          fields: [
+            {
+              name: 'language',
+              title: 'Language',
+              type: 'string',
+              options: {
+                list: [
+                  { title: 'JavaScript', value: 'javascript' },
+                  { title: 'TypeScript', value: 'typescript' },
+                  { title: 'HTML', value: 'html' },
+                  { title: 'CSS', value: 'css' },
+                  { title: 'Python', value: 'python' },
+                  { title: 'JSON', value: 'json' },
+                  { title: 'PHP', value: 'php' },
+                  { title: 'SQL', value: 'sql' },
+                ],
+              },
+            },
+            {
+              name: 'code',
+              title: 'Code',
+              type: 'text',
+              rows: 10,
+            },
+            {
+              name: 'filename',
+              title: 'Filename (optional)',
+              type: 'string',
+            },
+          ],
+          preview: {
+            select: {
+              language: 'language',
+              code: 'code',
+              filename: 'filename',
+            },
+            prepare(selection) {
+              const { language, code, filename } = selection
+              const title = filename || `Code (${language})`
+              const subtitle = code ? code.substring(0, 50) + (code.length > 50 ? '...' : '') : 'No code'
+              return {
+                title,
+                subtitle,
+                media: () => '💻',
+              }
+            },
           },
         },
       ],
