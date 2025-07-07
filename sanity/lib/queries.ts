@@ -41,12 +41,14 @@ export const postQuery = groq`
 `
 
 export const teamQuery = groq`
-  *[_type == "teamMember"] | order(name asc) {
+  *[_type == "teamMember"] | order(order asc) {
     _id,
     name,
     role,
+    order,
     image,
     bio,
+    personalNote,
     socialLinks
   }
 `
@@ -69,5 +71,15 @@ export const categoriesQuery = groq`
     _id,
     title,
     description
+  }
+`
+
+export const companyLogosQuery = groq`
+  *[_type == "companyLogo" && isActive == true] | order(order asc) {
+    _id,
+    name,
+    logo,
+    url,
+    order
   }
 `

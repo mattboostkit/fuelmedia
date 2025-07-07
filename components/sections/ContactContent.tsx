@@ -152,8 +152,10 @@ export function ContactContent() {
                     className="w-full"
                     isLoading={isSubmitting}
                   >
-                    <Send className="mr-2" size={20} />
-                    Send Message
+                    <span className="inline-flex items-center">
+                      <Send className="mr-2" size={20} />
+                      Send Message
+                    </span>
                   </Button>
                 </form>
               </Card>

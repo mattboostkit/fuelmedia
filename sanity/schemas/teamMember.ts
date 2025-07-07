@@ -18,6 +18,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'order',
+      title: 'Display Order',
+      type: 'number',
+      description: 'Lower numbers appear first',
+      validation: (Rule) => Rule.required().min(0),
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -37,8 +44,49 @@ export default defineType({
     defineField({
       name: 'bio',
       title: 'Bio',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'H3', value: 'h3' },
+            { title: 'H4', value: 'h4' },
+            { title: 'Quote', value: 'blockquote' },
+          ],
+          lists: [
+            { title: 'Bullet', value: 'bullet' },
+            { title: 'Number', value: 'number' },
+          ],
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+            ],
+            annotations: [
+              {
+                title: 'URL',
+                name: 'link',
+                type: 'object',
+                fields: [
+                  {
+                    title: 'URL',
+                    name: 'href',
+                    type: 'url',
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      ],
+    }),
+    defineField({
+      name: 'personalNote',
+      title: 'Personal Note',
       type: 'text',
-      rows: 4,
+      description: 'Personal interests or fun facts (displayed in italics)',
+      rows: 2,
     }),
     defineField({
       name: 'socialLinks',
