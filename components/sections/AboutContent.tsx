@@ -337,9 +337,8 @@ export function AboutContent() {
                   <p className="text-lg text-primary font-semibold mb-4">{member.role}</p>
                   <div className="space-y-3 text-gray-600 dark:text-white/60">
                     {member.bio && Array.isArray(member.bio) && typeof member.bio[0] === 'object' && '_type' in member.bio[0] && (member.bio[0] as { _type: string })._type === 'block' ? (
-                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
                       <PortableText 
-                        value={member.bio as any}
+                        value={member.bio as unknown as import('sanity').TypedObject[]}
                         components={{
                           block: {
                             normal: ({children}) => <p className="mb-3">{children}</p>,
