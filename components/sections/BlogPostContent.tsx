@@ -13,37 +13,45 @@ import { BlogPost, SanityImage } from '@/types/sanity'
 
 const portableTextComponents = {
   types: {
-    image: ({ value }: { value: SanityImage & { alt?: string } }) => (
-      <div className="my-8">
-        <Image
-          src={urlFor(value).width(1200).url()}
-          alt={value.alt || 'Blog image'}
-          width={1200}
-          height={675}
-          className="rounded-lg w-full"
-        />
-      </div>
-    ),
+    image: ({ value }: any) => {
+      if (!value?.asset?._ref) {
+        return null
+      }
+      return (
+        <div className="my-8">
+          <Image
+            src={urlFor(value).width(1200).url()}
+            alt={value.alt || 'Blog image'}
+            width={1200}
+            height={675}
+            className="rounded-lg w-full"
+          />
+        </div>
+      )
+    },
   },
   block: {
-    h1: ({ children }: { children: React.ReactNode }) => <h1 className="text-4xl font-bebas mt-8 mb-4 text-white">{children}</h1>,
-    h2: ({ children }: { children: React.ReactNode }) => <h2 className="text-3xl font-bebas mt-8 mb-4 text-white">{children}</h2>,
-    h3: ({ children }: { children: React.ReactNode }) => <h3 className="text-2xl font-bebas mt-6 mb-3 text-white">{children}</h3>,
-    normal: ({ children }: { children: React.ReactNode }) => <p className="mb-4 text-white/80 leading-relaxed">{children}</p>,
-    blockquote: ({ children }: { children: React.ReactNode }) => (
+    h1: ({ children }: any) => children ? <h1 className="text-4xl font-bebas mt-8 mb-4 text-white">{children}</h1> : null,
+    h2: ({ children }: any) => children ? <h2 className="text-3xl font-bebas mt-8 mb-4 text-white">{children}</h2> : null,
+    h3: ({ children }: any) => children ? <h3 className="text-2xl font-bebas mt-6 mb-3 text-white">{children}</h3> : null,
+    normal: ({ children }: any) => children ? <p className="mb-4 text-white/80 leading-relaxed">{children}</p> : null,
+    blockquote: ({ children }: any) => children ? (
       <blockquote className="border-l-4 border-flame-orange pl-6 my-6 italic text-white/70">
         {children}
       </blockquote>
-    ),
+    ) : null,
   },
   marks: {
-    link: ({ children, value }: { children: React.ReactNode; value?: { href: string } }) => (
-      <a href={value?.href || '#'} className="text-flame-orange hover:text-flame-yellow transition-colors">
-        {children}
-      </a>
-    ),
-    strong: ({ children }: { children: React.ReactNode }) => <strong className="font-semibold text-white">{children}</strong>,
-    em: ({ children }: { children: React.ReactNode }) => <em className="italic">{children}</em>,
+    link: ({ children, value }: any) => {
+      const href = value?.href || '#'
+      return children ? (
+        <a href={href} className="text-flame-orange hover:text-flame-yellow transition-colors">
+          {children}
+        </a>
+      ) : null
+    },
+    strong: ({ children }: any) => children ? <strong className="font-semibold text-white">{children}</strong> : null,
+    em: ({ children }: any) => children ? <em className="italic">{children}</em> : null,
   },
 }
 
