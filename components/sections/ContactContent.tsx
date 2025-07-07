@@ -74,14 +74,14 @@ export function ContactContent() {
             className="text-center mb-16"
           >
             <AnimatedText variant="slideUp" className="h1 gradient-text mb-6">
-              Let's Ignite Something Amazing
+              Let&apos;s Ignite Something Amazing
             </AnimatedText>
             <AnimatedText
               variant="fadeIn"
               delay={0.2}
               className="text-xl text-white/80 max-w-3xl mx-auto"
             >
-              Ready to transform your brand? Get in touch and let's create marketing magic together
+              Ready to transform your brand? Get in touch and let&apos;s create marketing magic together
             </AnimatedText>
           </motion.div>
 

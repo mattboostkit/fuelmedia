@@ -3,12 +3,13 @@ import { notFound } from 'next/navigation'
 import { client } from '@/sanity/lib/client'
 import { postQuery, postsQuery } from '@/sanity/lib/queries'
 import { BlogPostContent } from '@/components/sections/BlogPostContent'
+import { BlogPost } from '@/types/sanity'
 
 export const revalidate = 60
 
 export async function generateStaticParams() {
   const posts = await client.fetch(postsQuery)
-  return posts.map((post: any) => ({
+  return posts.map((post: BlogPost) => ({
     slug: post.slug.current,
   }))
 }

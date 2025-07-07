@@ -8,32 +8,10 @@ import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/client'
 import { formatDate } from '@/lib/utils'
 import { useState } from 'react'
-
-type Post = {
-  _id: string
-  title: string
-  slug: { current: string }
-  excerpt: string
-  mainImage: any
-  publishedAt: string
-  author: {
-    name: string
-    image: any
-  }
-  categories: Array<{
-    _id: string
-    title: string
-  }>
-}
-
-type Category = {
-  _id: string
-  title: string
-  description: string
-}
+import { BlogPost, Category, SanityImage } from '@/types/sanity'
 
 interface BlogContentProps {
-  posts: Post[]
+  posts: BlogPost[]
   categories: Category[]
 }
 
@@ -69,7 +47,7 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
               delay={0.2}
               className="text-xl text-white/80 max-w-3xl mx-auto"
             >
-              Insights, trends, and strategies to fuel your brand's growth
+              Insights, trends, and strategies to fuel your brand&apos;s growth
             </AnimatedText>
           </motion.div>
 

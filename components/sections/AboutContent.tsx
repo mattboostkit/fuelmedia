@@ -53,7 +53,7 @@ export function AboutContent() {
             </AnimatedText>
             <AnimatedText variant="fadeIn" delay={0.2} className="text-xl text-white/80 leading-relaxed">
               Born from a passion to revolutionize digital marketing, Fuel Media & Marketing 
-              emerged as a disruptive force in the industry. We don't just follow trends—we 
+              emerged as a disruptive force in the industry. We don&apos;t just follow trends—we 
               create them. Our flame-powered approach transforms brands from sparks into 
               infernos of success.
             </AnimatedText>

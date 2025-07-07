@@ -158,7 +158,7 @@ export function PartnershipsContent() {
           >
             <h2 className="gradient-text mb-6">Ready to Partner?</h2>
             <p className="text-xl text-white/80 mb-8">
-              Let's explore how we can create explosive growth together
+              Let&apos;s explore how we can create explosive growth together
             </p>
             <Button variant="flame" size="lg">
               Apply for Partnership

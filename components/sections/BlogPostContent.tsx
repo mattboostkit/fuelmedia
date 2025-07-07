@@ -2,35 +2,18 @@
 
 import { motion } from 'framer-motion'
 import { AnimatedText, Button } from '@/components/ui'
-import { Calendar, User, ArrowLeft, Share2 } from 'lucide-react'
+import { Calendar, ArrowLeft, Share2 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { urlFor } from '@/sanity/lib/client'
 import { formatDate } from '@/lib/utils'
+import { BlogPost, SanityImage } from '@/types/sanity'
 
-type Post = {
-  _id: string
-  title: string
-  slug: { current: string }
-  excerpt: string
-  mainImage: any
-  publishedAt: string
-  body: any[]
-  author: {
-    name: string
-    image: any
-    bio: string
-  }
-  categories: Array<{
-    _id: string
-    title: string
-  }>
-}
 
 const portableTextComponents = {
   types: {
-    image: ({ value }: any) => (
+    image: ({ value }: { value: SanityImage & { alt?: string } }) => (
       <div className="my-8">
         <Image
           src={urlFor(value).width(1200).url()}
@@ -43,28 +26,28 @@ const portableTextComponents = {
     ),
   },
   block: {
-    h1: ({ children }: any) => <h1 className="text-4xl font-bebas mt-8 mb-4 text-white">{children}</h1>,
-    h2: ({ children }: any) => <h2 className="text-3xl font-bebas mt-8 mb-4 text-white">{children}</h2>,
-    h3: ({ children }: any) => <h3 className="text-2xl font-bebas mt-6 mb-3 text-white">{children}</h3>,
-    normal: ({ children }: any) => <p className="mb-4 text-white/80 leading-relaxed">{children}</p>,
-    blockquote: ({ children }: any) => (
+    h1: ({ children }: { children: React.ReactNode }) => <h1 className="text-4xl font-bebas mt-8 mb-4 text-white">{children}</h1>,
+    h2: ({ children }: { children: React.ReactNode }) => <h2 className="text-3xl font-bebas mt-8 mb-4 text-white">{children}</h2>,
+    h3: ({ children }: { children: React.ReactNode }) => <h3 className="text-2xl font-bebas mt-6 mb-3 text-white">{children}</h3>,
+    normal: ({ children }: { children: React.ReactNode }) => <p className="mb-4 text-white/80 leading-relaxed">{children}</p>,
+    blockquote: ({ children }: { children: React.ReactNode }) => (
       <blockquote className="border-l-4 border-flame-orange pl-6 my-6 italic text-white/70">
         {children}
       </blockquote>
     ),
   },
   marks: {
-    link: ({ children, value }: any) => (
+    link: ({ children, value }: { children: React.ReactNode; value: { href: string } }) => (
       <a href={value.href} className="text-flame-orange hover:text-flame-yellow transition-colors">
         {children}
       </a>
     ),
-    strong: ({ children }: any) => <strong className="font-semibold text-white">{children}</strong>,
-    em: ({ children }: any) => <em className="italic">{children}</em>,
+    strong: ({ children }: { children: React.ReactNode }) => <strong className="font-semibold text-white">{children}</strong>,
+    em: ({ children }: { children: React.ReactNode }) => <em className="italic">{children}</em>,
   },
 }
 
-export function BlogPostContent({ post }: { post: Post }) {
+export function BlogPostContent({ post }: { post: BlogPost }) {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
