@@ -37,8 +37,8 @@ const portableTextComponents = {
     ),
   },
   marks: {
-    link: ({ children, value }: { children: React.ReactNode; value: { href: string } }) => (
-      <a href={value.href} className="text-flame-orange hover:text-flame-yellow transition-colors">
+    link: ({ children, value }: { children: React.ReactNode; value?: { href: string } }) => (
+      <a href={value?.href || '#'} className="text-flame-orange hover:text-flame-yellow transition-colors">
         {children}
       </a>
     ),
