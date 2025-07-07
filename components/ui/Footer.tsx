@@ -15,11 +15,7 @@ const footerLinks = {
     { href: '/#services', label: 'Contract Negotiations' },
     { href: '/#services', label: 'Performance Reviews' },
   ],
-  legal: [
-    // { href: '/privacy', label: 'Privacy Policy' },
-    // { href: '/terms', label: 'Terms of Service' },
-    // { href: '/cookies', label: 'Cookie Policy' },
-  ],
+  legal: [] as Array<{ href: string; label: string }>,
 }
 
 const socialLinks = [
