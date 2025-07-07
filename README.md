@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fuel Media & Marketing Website
 
-## Getting Started
+A modern, high-performance website for Fuel Media & Marketing built with Next.js 14+, TypeScript, Tailwind CSS, and Sanity CMS.
 
-First, run the development server:
+## 🔥 Features
 
+- **Modern Stack**: Next.js 14 App Router, TypeScript, Tailwind CSS
+- **CMS Integration**: Sanity.io for blog and content management
+- **Animations**: Framer Motion for smooth, engaging animations
+- **Responsive Design**: Mobile-first approach with fluid layouts
+- **Performance**: Optimized for Core Web Vitals and SEO
+- **Flame Theme**: Bold, disruptive design with fire-inspired animations
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- Sanity account with project ID
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/fuel-media-website.git
+cd fuel-media-website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+Create a `.env.local` file with:
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+fuel-media-website/
+├── app/
+│   ├── (site)/
+│   │   ├── about/
+│   │   ├── partnerships/
+│   │   ├── blog/
+│   │   └── contact/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── ui/              # Reusable UI components
+│   ├── sections/        # Page sections
+│   └── animations/      # Animation components
+├── sanity/
+│   ├── schemas/         # Content schemas
+│   └── lib/            # Sanity client & queries
+└── public/             # Static assets
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design System
 
-## Deploy on Vercel
+### Colors
+- **Primary**: Purple (#662481)
+- **Secondary Blue**: #029fe0
+- **Secondary Pink**: #e6067c
+- **Flame Colors**: Orange (#ff6b35), Yellow (#ffd93d), Red (#e63946)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Typography
+- **Headings**: Bebas Neue
+- **Body**: Inter
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Content Management
+
+The site uses Sanity CMS for content management. Available schemas:
+
+- **Blog Posts**: Articles with rich text, images, and categories
+- **Authors**: Blog post authors with bio and social links
+- **Categories**: Blog post categories
+- **Gallery**: Image galleries for various pages
+- **Team Members**: Team profiles with roles and social links
+- **Case Studies**: Client success stories
+
+## 🛠️ Development
+
+### Commands
+
+```bash
+npm run dev        # Start development server
+npm run build      # Build for production
+npm run start      # Start production server
+npm run lint       # Run ESLint
+```
+
+### Adding New Pages
+
+1. Create a new folder in `app/(site)/`
+2. Add a `page.tsx` file
+3. Create corresponding sections in `components/sections/`
+4. Update navigation in `components/ui/Navigation.tsx`
+
+## 🚀 Deployment
+
+The site is optimized for deployment on Vercel:
+
+1. Push to GitHub
+2. Import project in Vercel
+3. Add environment variables
+4. Deploy
+
+## 📄 License
+
+This project is licensed under the MIT License.

@@ -1,26 +1,112 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+    @apply antialiased overflow-x-hidden;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bebas), Arial, sans-serif;
+    @apply tracking-wider;
+  }
+
+  h1 {
+    @apply text-6xl md:text-8xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-6xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-4xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-300;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .gradient-text {
+    background: linear-gradient(to right, theme('colors.flame.orange'), theme('colors.flame.red'), theme('colors.flame.yellow'));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(to right, theme('colors.primary.DEFAULT'), theme('colors.secondary.blue'), theme('colors.secondary.pink'));
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  .flame-shadow {
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.5), 
+                0 0 60px rgba(230, 57, 70, 0.3),
+                0 0 90px rgba(255, 217, 61, 0.2);
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-lg border border-white/10;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .hover-flame {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+
+  .hover-flame:hover {
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.5), 
+                0 0 60px rgba(230, 57, 70, 0.3),
+                0 0 90px rgba(255, 217, 61, 0.2);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow {
+    filter: drop-shadow(0 0 20px currentColor);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
