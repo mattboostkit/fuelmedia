@@ -24,7 +24,7 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
       post.categories?.some(cat => cat._id === selectedCategory)
     const matchesSearch = !searchQuery || 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
+      (post.excerpt?.toLowerCase().includes(searchQuery.toLowerCase()) ?? false)
     
     return matchesCategory && matchesSearch
   })
@@ -138,7 +138,9 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
                           {post.title}
                         </h2>
                         
-                        <p className="text-white/60 mb-4 line-clamp-3">{post.excerpt}</p>
+                        {post.excerpt && (
+                          <p className="text-white/60 mb-4 line-clamp-3">{post.excerpt}</p>
+                        )}
                         
                         <div className="flex items-center justify-between text-sm text-white/40">
                           <div className="flex items-center gap-4">
