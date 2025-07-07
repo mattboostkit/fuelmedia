@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import { motion } from 'framer-motion'
@@ -8,7 +9,7 @@ import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { urlFor } from '@/sanity/lib/client'
 import { formatDate } from '@/lib/utils'
-import { BlogPost, SanityImage } from '@/types/sanity'
+import { BlogPost } from '@/types/sanity'
 
 
 const portableTextComponents = {
