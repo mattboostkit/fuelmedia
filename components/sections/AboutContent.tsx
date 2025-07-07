@@ -225,19 +225,104 @@ export function AboutContent() {
             </p>
           </motion.div>
 
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* Oli Orchard */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <Card className="h-full">
+                <h3 className="font-bebas mb-1 text-gray-900 dark:text-white">Oli Orchard</h3>
+                <p className="text-lg text-primary font-semibold mb-4">Partner</p>
+                <div className="space-y-3 text-gray-600 dark:text-white/60">
+                  <p>
+                    Oli is a globally experienced media and marketing consultant and the founder of Fuel Media and Marketing. 
+                    With nearly two decades of leadership at Time Inc, WPP, and Publicis, Oli brings deep expertise to his 
+                    clients across Europe and the USA.
+                  </p>
+                  <p>
+                    As a trusted advisor, Oli optimises media strategy, procurement, and agency partnerships. He excels at 
+                    contract negotiations, pitch management, and developing performance metrics that drive ROI for blue-chip companies.
+                  </p>
+                  <p>
+                    Oli is passionate about fostering transparency and trust between clients and agencies in an industry often 
+                    criticised for opaque practices. His strategic acumen and dedication to open communication make him a powerful asset.
+                  </p>
+                  <p className="text-sm italic">
+                    When not advising clients, Oli is an avid cyclist and dedicated father of two energetic boys.
+                  </p>
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* John Ferguson */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Card className="h-full">
+                <h3 className="font-bebas mb-1 text-gray-900 dark:text-white">John Ferguson</h3>
+                <p className="text-lg text-primary font-semibold mb-4">Partner</p>
+                <div className="space-y-3 text-gray-600 dark:text-white/60">
+                  <p>
+                    John is a seasoned media professional and partner at Fuel Media and Marketing, bringing three decades of 
+                    international experience in senior management roles at IPG and major media consultancies.
+                  </p>
+                  <p>
+                    Renowned as a go-to subject matter expert in modern media trading, John specialises in improving transparency 
+                    at the client/agency interface. His deep understanding of this relationship helps both parties thrive through 
+                    optimized targets and margin management. John&apos;s unique ability to navigate local media trading nuances within 
+                    international norms sets him apart.
+                  </p>
+                  <p>
+                    With extensive experience in major media trading, John has developed a keen focus on digital communications. 
+                    He leverages the measurability and real-time tracking capabilities of digital to drive results. Alongside 
+                    Fuel&apos;s team of digital engineers, John positions the firm as a digital-first consultancy.
+                  </p>
+                  <p className="text-sm italic">
+                    A former elite athlete, John maintains an active lifestyle through cycling and regular gym sessions when away from the office.
+                  </p>
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* Johan Gran */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <Card className="h-full">
+                <h3 className="font-bebas mb-1 text-gray-900 dark:text-white">Johan Gran</h3>
+                <p className="text-lg text-primary font-semibold mb-4">Consultant</p>
+                <div className="space-y-3 text-gray-600 dark:text-white/60">
+                  <p>
+                    Johan is the force behind Fuel&apos;s digital measurement, quantitative research and consulting capabilities. 
+                    An experienced senior leader with over two decades of deep category knowledge.
+                  </p>
+                  <p>
+                    Johan has worked for media agency groups, media owners and consultancies, and brings a wealth of knowledge 
+                    and experience in digital media, mathematics, engineering, econometric and financial modelling. As a result 
+                    he has a significant interest in marketing and digital strategies, and analyses them in detail bringing 
+                    actionable insights to the fore.
+                  </p>
+                  <p className="text-sm italic">
+                    When not at work Johan can be found on his boat in the Swedish islands and driving his daughters around 
+                    to various important engagements.
+                  </p>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+
           <div className="max-w-4xl mx-auto">
             <Card>
-              <p className="text-lg text-gray-700 dark:text-white/80 leading-relaxed mb-6">
-                Our leadership team has held senior positions at WPP, Publicis, Omnicom, and 
-                independent agencies. We&apos;ve managed multi-million pound accounts for FTSE 100 
-                companies and global brands across every major market.
-              </p>
-              <p className="text-lg text-gray-700 dark:text-white/80 leading-relaxed mb-6">
-                This unique blend of agency-side and client-side experience gives us unmatched 
-                insight into both sides of the media equation. We know how agencies operate, where 
-                margins are hidden, and how to negotiate the best possible terms for our clients.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="text-center">
                   <h5 className="font-bebas text-primary mb-2">50+ Years</h5>
                   <p className="text-gray-600 dark:text-white/60">Combined media experience</p>
