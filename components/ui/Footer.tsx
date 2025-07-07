@@ -10,15 +10,15 @@ const footerLinks = {
     { href: '/contact', label: 'Contact' },
   ],
   services: [
-    { href: '/services/digital-marketing', label: 'Digital Marketing' },
-    { href: '/services/brand-strategy', label: 'Brand Strategy' },
-    { href: '/services/social-media', label: 'Social Media' },
-    { href: '/services/web-design', label: 'Web Design' },
+    { href: '/#services', label: 'Media Audits' },
+    { href: '/#services', label: 'Agency Pitches' },
+    { href: '/#services', label: 'Contract Negotiations' },
+    { href: '/#services', label: 'Performance Reviews' },
   ],
   legal: [
-    { href: '/privacy', label: 'Privacy Policy' },
-    { href: '/terms', label: 'Terms of Service' },
-    { href: '/cookies', label: 'Cookie Policy' },
+    // { href: '/privacy', label: 'Privacy Policy' },
+    // { href: '/terms', label: 'Terms of Service' },
+    // { href: '/cookies', label: 'Cookie Policy' },
   ],
 }
 
