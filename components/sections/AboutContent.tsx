@@ -23,7 +23,7 @@ interface TeamMember {
     }
     alt?: string
   }
-  bio?: any[]
+  bio?: string[]
   personalNote?: string
   socialLinks?: {
     linkedin?: string
@@ -67,41 +67,52 @@ const timeline = [
 ]
 
 // Fallback team data
-const fallbackTeamData = [
+const fallbackTeamData: TeamMember[] = [
   {
+    _id: 'oli-orchard',
     name: 'Oli Orchard',
     role: 'Partner',
+    order: 0,
+    image: undefined,
     bio: [
       'Oli is a globally experienced media and marketing consultant and the founder of Fuel Media and Marketing. With nearly two decades of leadership at Time Inc, WPP, and Publicis, Oli brings deep expertise to his clients across Europe and the USA.',
       'As a trusted advisor, Oli optimises media strategy, procurement, and agency partnerships. He excels at contract negotiations, pitch management, and developing performance metrics that drive ROI for blue-chip companies.',
       'Oli is passionate about fostering transparency and trust between clients and agencies in an industry often criticised for opaque practices. His strategic acumen and dedication to open communication make him a powerful asset.'
     ],
-    personalNote: 'When not advising clients, Oli is an avid cyclist and dedicated father of two energetic boys.'
+    personalNote: 'When not advising clients, Oli is an avid cyclist and dedicated father of two energetic boys.',
+    socialLinks: {},
   },
   {
+    _id: 'john-ferguson',
     name: 'John Ferguson',
     role: 'Partner',
+    order: 1,
+    image: undefined,
     bio: [
       'John is a seasoned media professional and partner at Fuel Media and Marketing, bringing three decades of international experience in senior management roles at IPG and major media consultancies.',
       'Renowned as a go-to subject matter expert in modern media trading, John specialises in improving transparency at the client/agency interface. His deep understanding of this relationship helps both parties thrive through optimized targets and margin management. John\'s unique ability to navigate local media trading nuances within international norms sets him apart.',
       'With extensive experience in major media trading, John has developed a keen focus on digital communications. He leverages the measurability and real-time tracking capabilities of digital to drive results. Alongside Fuel\'s team of digital engineers, John positions the firm as a digital-first consultancy.'
     ],
-    personalNote: 'A former elite athlete, John maintains an active lifestyle through cycling and regular gym sessions when away from the office.'
+    personalNote: 'A former elite athlete, John maintains an active lifestyle through cycling and regular gym sessions when away from the office.',
+    socialLinks: {},
   },
   {
+    _id: 'johan-gran',
     name: 'Johan Gran',
     role: 'Consultant',
+    order: 2,
+    image: undefined,
     bio: [
       'Johan is the force behind Fuel\'s digital measurement, quantitative research and consulting capabilities. An experienced senior leader with over two decades of deep category knowledge.',
       'Johan has worked for media agency groups, media owners and consultancies, and brings a wealth of knowledge and experience in digital media, mathematics, engineering, econometric and financial modelling. As a result he has a significant interest in marketing and digital strategies, and analyses them in detail bringing actionable insights to the fore.'
     ],
-    personalNote: 'When not at work Johan can be found on his boat in the Swedish islands and driving his daughters around to various important engagements.'
+    personalNote: 'When not at work Johan can be found on his boat in the Swedish islands and driving his daughters around to various important engagements.',
+    socialLinks: {},
   }
 ]
 
 export function AboutContent() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([])
-  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchTeamMembers = async () => {
@@ -110,8 +121,6 @@ export function AboutContent() {
         setTeamMembers(data)
       } catch (error) {
         console.error('Error fetching team members:', error)
-      } finally {
-        setLoading(false)
       }
     }
 
@@ -327,9 +336,10 @@ export function AboutContent() {
                   <h3 className="font-bebas mb-1 text-gray-900 dark:text-white">{member.name}</h3>
                   <p className="text-lg text-primary font-semibold mb-4">{member.role}</p>
                   <div className="space-y-3 text-gray-600 dark:text-white/60">
-                    {member.bio && Array.isArray(member.bio) && member.bio[0]?._type === 'block' ? (
+                    {member.bio && Array.isArray(member.bio) && typeof member.bio[0] === 'object' && '_type' in member.bio[0] && (member.bio[0] as { _type: string })._type === 'block' ? (
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
                       <PortableText 
-                        value={member.bio}
+                        value={member.bio as any}
                         components={{
                           block: {
                             normal: ({children}) => <p className="mb-3">{children}</p>,

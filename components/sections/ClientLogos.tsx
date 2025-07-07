@@ -29,7 +29,6 @@ const fallbackClients = [
 export function ClientLogos() {
   const [mounted, setMounted] = useState(false)
   const [companyLogos, setCompanyLogos] = useState<CompanyLogo[]>([])
-  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setMounted(true)
@@ -40,8 +39,6 @@ export function ClientLogos() {
         setCompanyLogos(data)
       } catch (error) {
         console.error('Error fetching company logos:', error)
-      } finally {
-        setLoading(false)
       }
     }
 
