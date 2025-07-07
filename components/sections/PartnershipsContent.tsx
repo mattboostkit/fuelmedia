@@ -159,7 +159,7 @@ export function PartnershipsContent() {
           >
             <h2 className="gradient-text mb-6">Ready to Partner?</h2>
             <p className="text-xl text-gray-700 dark:text-white/80 mb-8">
-              Let's explore how we can deliver exceptional value to your clients together
+              Let&apos;s explore how we can deliver exceptional value to your clients together
             </p>
             <Link href="/contact">
               <Button variant="flame" size="lg" className="group">
@@ -201,7 +201,7 @@ export function PartnershipsContent() {
                 </p>
                 <p className="text-gray-600 dark:text-white/60">
                   Management consultancy partner leveraged our media audit expertise to identify 
-                  significant savings for their FTSE 100 client's media investment.
+                  significant savings for their FTSE 100 client&apos;s media investment.
                 </p>
               </Card>
             </motion.div>

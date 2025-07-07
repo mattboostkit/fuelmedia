@@ -227,7 +227,7 @@ export function AboutContent() {
             <Card>
               <p className="text-lg text-gray-700 dark:text-white/80 leading-relaxed mb-6">
                 Our leadership team has held senior positions at WPP, Publicis, Omnicom, and 
-                independent agencies. We've managed multi-million pound accounts for FTSE 100 
+                independent agencies. We&apos;ve managed multi-million pound accounts for FTSE 100 
                 companies and global brands across every major market.
               </p>
               <p className="text-lg text-gray-700 dark:text-white/80 leading-relaxed mb-6">
