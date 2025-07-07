@@ -73,9 +73,11 @@ export function ContactContent() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <AnimatedText variant="slideUp" className="h1 gradient-text mb-6">
-              Let&apos;s Ignite Something Amazing
-            </AnimatedText>
+            <h1 className="gradient-text mb-6">
+              <AnimatedText variant="slideUp">
+                Let&apos;s Ignite Something Amazing
+              </AnimatedText>
+            </h1>
             <AnimatedText
               variant="fadeIn"
               delay={0.2}
@@ -92,7 +94,7 @@ export function ContactContent() {
               transition={{ duration: 0.6 }}
             >
               <Card className="h-full">
-                <h2 className="text-3xl font-bebas mb-6 text-gray-900 dark:text-white">Send Us a Message</h2>
+                <h2 className="font-bebas mb-6 text-gray-900 dark:text-white">Send Us a Message</h2>
                 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div>
@@ -164,7 +166,7 @@ export function ContactContent() {
               className="space-y-6"
             >
               <div>
-                <h3 className="text-2xl font-bebas mb-6 text-gray-900 dark:text-white">Get in Touch</h3>
+                <h3 className="font-bebas mb-6 text-gray-900 dark:text-white">Get in Touch</h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <motion.a
@@ -179,7 +181,7 @@ export function ContactContent() {
                         <info.icon className="text-white" size={24} />
                       </div>
                       <div>
-                        <h4 className="font-bebas text-xl text-gray-900 dark:text-white mb-1">{info.title}</h4>
+                        <h4 className="font-bebas text-gray-900 dark:text-white mb-1">{info.title}</h4>
                         <p className="text-gray-700 dark:text-white/60">{info.content}</p>
                       </div>
                     </motion.a>
@@ -188,7 +190,7 @@ export function ContactContent() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bebas mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h3>
+                <h3 className="font-bebas mb-6 text-gray-900 dark:text-white">Frequently Asked Questions</h3>
                 <div className="space-y-3">
                   {faqs.map((faq, index) => (
                     <motion.div
@@ -202,7 +204,7 @@ export function ContactContent() {
                         className="w-full text-left p-4 rounded-lg glass-effect hover:border-flame-orange/50 transition-all duration-300"
                       >
                         <div className="flex justify-between items-center">
-                          <h4 className="text-gray-900 dark:text-white font-medium">{faq.question}</h4>
+                          <h5 className="text-gray-900 dark:text-white font-medium">{faq.question}</h5>
                           <span className="text-flame-orange text-2xl">
                             {expandedFaq === index ? '−' : '+'}
                           </span>

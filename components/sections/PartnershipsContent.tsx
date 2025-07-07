@@ -69,9 +69,11 @@ export function PartnershipsContent() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <AnimatedText variant="slideUp" className="h1 gradient-text mb-6">
-              Partnership Opportunities
-            </AnimatedText>
+            <h1 className="gradient-text mb-6">
+              <AnimatedText variant="slideUp">
+                Partnership Opportunities
+              </AnimatedText>
+            </h1>
             <AnimatedText
               variant="fadeIn"
               delay={0.2}
@@ -113,7 +115,7 @@ export function PartnershipsContent() {
 
                 return (
                   <Card key={category.id} className="max-w-4xl mx-auto">
-                    <h3 className="text-3xl font-bebas mb-4 gradient-text">{category.title}</h3>
+                    <h3 className="font-bebas mb-4 gradient-text">{category.title}</h3>
                     <p className="text-gray-700 dark:text-white/80 mb-6">{category.description}</p>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -143,7 +145,7 @@ export function PartnershipsContent() {
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-primary to-secondary-blue flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="text-white" size={28} />
                   </div>
-                  <h3 className="text-2xl font-bebas mb-3 text-gray-900 dark:text-white">{benefit.title}</h3>
+                  <h3 className="font-bebas mb-3 text-gray-900 dark:text-white">{benefit.title}</h3>
                   <p className="text-gray-600 dark:text-white/60">{benefit.description}</p>
                 </Card>
               </motion.div>
@@ -157,7 +159,7 @@ export function PartnershipsContent() {
             transition={{ duration: 0.6 }}
             className="text-center glass-effect rounded-2xl p-12 max-w-4xl mx-auto"
           >
-            <h2 className="gradient-text mb-6">Ready to Partner?</h2>
+            <h2 className="gradient-text mb-6 font-bebas">Ready to Partner?</h2>
             <p className="text-xl text-gray-700 dark:text-white/80 mb-8">
               Let&apos;s explore how we can deliver exceptional value to your clients together
             </p>
@@ -181,7 +183,7 @@ export function PartnershipsContent() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="gradient-text mb-6">Partnership Success Stories</h2>
+            <h2 className="gradient-text mb-6 font-bebas">Partnership Success Stories</h2>
             <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               See how our partners have leveraged our expertise to deliver exceptional value
             </p>
@@ -195,7 +197,7 @@ export function PartnershipsContent() {
               transition={{ duration: 0.5 }}
             >
               <Card className="h-full">
-                <h3 className="text-4xl font-bebas text-primary mb-2">£45M</h3>
+                <h4 className="text-4xl font-bebas text-primary mb-2">£45M</h4>
                 <p className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   Saved for Joint Client
                 </p>
@@ -213,7 +215,7 @@ export function PartnershipsContent() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <Card className="h-full">
-                <h3 className="text-4xl font-bebas text-primary mb-2">12</h3>
+                <h4 className="text-4xl font-bebas text-primary mb-2">12</h4>
                 <p className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   Successful Referrals
                 </p>
@@ -231,7 +233,7 @@ export function PartnershipsContent() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Card className="h-full">
-                <h3 className="text-4xl font-bebas text-primary mb-2">3x</h3>
+                <h4 className="text-4xl font-bebas text-primary mb-2">3x</h4>
                 <p className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   Revenue Growth
                 </p>
@@ -255,7 +257,7 @@ export function PartnershipsContent() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="gradient-text mb-6">How We Partner</h2>
+            <h2 className="gradient-text mb-6 font-bebas">How We Partner</h2>
             <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               Our partnership process is designed to ensure mutual success from day one
             </p>
@@ -274,7 +276,7 @@ export function PartnershipsContent() {
                   1
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bebas mb-2 text-gray-900 dark:text-white">
+                  <h3 className="font-bebas mb-2 text-gray-900 dark:text-white">
                     Initial Consultation
                   </h3>
                   <p className="text-gray-600 dark:text-white/60">
@@ -295,7 +297,7 @@ export function PartnershipsContent() {
                   2
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bebas mb-2 text-gray-900 dark:text-white">
+                  <h3 className="font-bebas mb-2 text-gray-900 dark:text-white">
                     Partnership Agreement
                   </h3>
                   <p className="text-gray-600 dark:text-white/60">
@@ -316,7 +318,7 @@ export function PartnershipsContent() {
                   3
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bebas mb-2 text-gray-900 dark:text-white">
+                  <h3 className="font-bebas mb-2 text-gray-900 dark:text-white">
                     Training & Enablement
                   </h3>
                   <p className="text-gray-600 dark:text-white/60">
@@ -337,7 +339,7 @@ export function PartnershipsContent() {
                   4
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bebas mb-2 text-gray-900 dark:text-white">
+                  <h3 className="font-bebas mb-2 text-gray-900 dark:text-white">
                     Ongoing Collaboration
                   </h3>
                   <p className="text-gray-600 dark:text-white/60">
@@ -360,7 +362,7 @@ export function PartnershipsContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="gradient-text mb-6">Start Your Partnership Journey</h2>
+            <h2 className="gradient-text mb-6 font-bebas">Start Your Partnership Journey</h2>
             <p className="text-xl text-gray-700 dark:text-white/80 mb-8 max-w-2xl mx-auto">
               Join our network of trusted partners and unlock new opportunities for growth
             </p>

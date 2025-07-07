@@ -55,7 +55,7 @@ export function StatsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bebas mb-4">
+          <h2 className="font-bebas mb-4">
             <span className="gradient-text">Proven Results</span> That Matter
           </h2>
           <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">

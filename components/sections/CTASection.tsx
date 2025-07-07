@@ -22,9 +22,11 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <AnimatedText variant="slideUp" className="h2 gradient-text mb-6">
-            Ready to Transform Your Media Investment?
-          </AnimatedText>
+          <h2 className="gradient-text mb-6 font-bebas">
+            <AnimatedText variant="slideUp">
+              Ready to Transform Your Media Investment?
+            </AnimatedText>
+          </h2>
           <AnimatedText
             variant="fadeIn"
             delay={0.2}

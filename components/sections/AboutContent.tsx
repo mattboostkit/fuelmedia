@@ -49,9 +49,11 @@ export function AboutContent() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center mb-16"
           >
-            <AnimatedText variant="slideUp" className="h1 gradient-text mb-6">
-              Our Story
-            </AnimatedText>
+            <h1 className="gradient-text mb-6">
+              <AnimatedText variant="slideUp">
+                Our Story
+              </AnimatedText>
+            </h1>
             <AnimatedText variant="fadeIn" delay={0.2} className="text-xl text-gray-700 dark:text-white/80 leading-relaxed">
               Founded by industry veterans with over 50 years of combined experience across global 
               media networks, Fuel Media & Marketing emerged to address a critical gap in the market. 
@@ -75,7 +77,7 @@ export function AboutContent() {
                       <value.icon className="text-white" size={24} />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bebas mb-2 text-gray-900 dark:text-white">{value.title}</h3>
+                      <h3 className="font-bebas mb-2 text-gray-900 dark:text-white">{value.title}</h3>
                       <p className="text-gray-600 dark:text-white/60">{value.description}</p>
                     </div>
                   </div>
@@ -90,7 +92,7 @@ export function AboutContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center gradient-text mb-12"
+              className="text-center gradient-text mb-12 font-bebas"
             >
               Our Journey
             </motion.h2>
@@ -112,7 +114,7 @@ export function AboutContent() {
                   <div className="w-1/2" />
                   <div className="relative z-10 w-8 h-8 bg-gradient-to-r from-primary to-secondary-pink rounded-full border-4 border-gray-100 dark:border-black mx-4 flex-shrink-0" />
                   <div className={`w-1/2 ${index % 2 === 0 ? 'text-right' : ''}`}>
-                    <h3 className="text-3xl font-bebas text-primary mb-2">{item.year}</h3>
+                    <h4 className="text-3xl font-bebas text-primary mb-2">{item.year}</h4>
                     <p className="text-gray-700 dark:text-white/80">{item.event}</p>
                   </div>
                 </motion.div>
@@ -132,7 +134,7 @@ export function AboutContent() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="gradient-text mb-6">Our Expertise</h2>
+            <h2 className="gradient-text mb-6 font-bebas">Our Expertise</h2>
             <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               We bring unparalleled depth of knowledge across every aspect of media investment, 
               from traditional channels to emerging digital platforms.
@@ -147,7 +149,7 @@ export function AboutContent() {
               transition={{ duration: 0.5 }}
             >
               <Card className="h-full">
-                <h3 className="text-2xl font-bebas mb-4 gradient-text">Financial Auditing</h3>
+                <h3 className="font-bebas mb-4 gradient-text">Financial Auditing</h3>
                 <p className="text-gray-600 dark:text-white/60 mb-4">
                   Comprehensive review of media spend, contract terms, and agency fees. We analyze 
                   every pound to ensure maximum value and identify savings opportunities.
@@ -168,7 +170,7 @@ export function AboutContent() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <Card className="h-full">
-                <h3 className="text-2xl font-bebas mb-4 gradient-text">Performance Review</h3>
+                <h3 className="font-bebas mb-4 gradient-text">Performance Review</h3>
                 <p className="text-gray-600 dark:text-white/60 mb-4">
                   Data-driven analysis of campaign effectiveness, media mix optimization, and 
                   strategic recommendations for improved ROI.
@@ -189,7 +191,7 @@ export function AboutContent() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Card className="h-full">
-                <h3 className="text-2xl font-bebas mb-4 gradient-text">Pitch Management</h3>
+                <h3 className="font-bebas mb-4 gradient-text">Pitch Management</h3>
                 <p className="text-gray-600 dark:text-white/60 mb-4">
                   End-to-end management of media agency selection processes, ensuring you find 
                   the perfect partner for your business needs.
@@ -216,7 +218,7 @@ export function AboutContent() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="gradient-text mb-6">Leadership Team</h2>
+            <h2 className="gradient-text mb-6 font-bebas">Leadership Team</h2>
             <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               Our senior team brings decades of experience from leading global media agencies, 
               tech platforms, and consultancies.
@@ -237,19 +239,19 @@ export function AboutContent() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                 <div className="text-center">
-                  <h4 className="text-xl font-bebas text-primary mb-2">50+ Years</h4>
+                  <h5 className="font-bebas text-primary mb-2">50+ Years</h5>
                   <p className="text-gray-600 dark:text-white/60">Combined media experience</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-xl font-bebas text-primary mb-2">£5B+</h4>
+                  <h5 className="font-bebas text-primary mb-2">£5B+</h5>
                   <p className="text-gray-600 dark:text-white/60">Media budgets managed</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-xl font-bebas text-primary mb-2">15+ Markets</h4>
+                  <h5 className="font-bebas text-primary mb-2">15+ Markets</h5>
                   <p className="text-gray-600 dark:text-white/60">Global experience</p>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-xl font-bebas text-primary mb-2">100%</h4>
+                  <h5 className="font-bebas text-primary mb-2">100%</h5>
                   <p className="text-gray-600 dark:text-white/60">Independent & unbiased</p>
                 </div>
               </div>
@@ -267,7 +269,7 @@ export function AboutContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="gradient-text mb-6">Ready to Transform Your Media Investment?</h2>
+            <h2 className="gradient-text mb-6 font-bebas">Ready to Transform Your Media Investment?</h2>
             <p className="text-xl text-gray-700 dark:text-white/80 mb-8 max-w-2xl mx-auto">
               Join the growing list of advertisers who have saved millions through our expert 
               media audit services.

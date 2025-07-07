@@ -45,9 +45,11 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <AnimatedText variant="slideUp" className="h2 gradient-text mb-4">
-            Your Competitive Advantage
-          </AnimatedText>
+          <h2 className="gradient-text mb-4 font-bebas">
+            <AnimatedText variant="slideUp">
+              Your Competitive Advantage
+            </AnimatedText>
+          </h2>
           <AnimatedText
             variant="fadeIn"
             delay={0.2}
@@ -73,7 +75,7 @@ export function AboutSection() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bebas mb-2 text-gray-900 dark:text-white">{item.title}</h3>
+                <h3 className="font-bebas mb-2 text-gray-900 dark:text-white">{item.title}</h3>
                 <p className="text-gray-600 dark:text-white/60">{item.description}</p>
               </div>
             </motion.div>

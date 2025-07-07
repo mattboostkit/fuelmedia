@@ -39,9 +39,11 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <AnimatedText variant="slideUp" className="h1 gradient-text mb-6">
-              Igniting Ideas
-            </AnimatedText>
+            <h1 className="gradient-text mb-6">
+              <AnimatedText variant="slideUp">
+                Igniting Ideas
+              </AnimatedText>
+            </h1>
             <AnimatedText
               variant="fadeIn"
               delay={0.2}
@@ -70,7 +72,7 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
                 </div>
 
                 <div>
-                  <h3 className="font-bebas text-xl mb-4 text-gray-900 dark:text-white">Categories</h3>
+                  <h3 className="font-bebas mb-4 text-gray-900 dark:text-white">Categories</h3>
                   <div className="space-y-2">
                     <button
                       onClick={() => setSelectedCategory(null)}
@@ -134,9 +136,9 @@ export function BlogContent({ posts, categories }: BlogContentProps) {
                           ))}
                         </div>
 
-                        <h2 className="text-2xl font-bebas mb-3 text-white group-hover:text-flame-orange transition-colors">
+                        <h3 className="font-bebas mb-3 text-white group-hover:text-flame-orange transition-colors">
                           {post.title}
-                        </h2>
+                        </h3>
                         
                         {post.excerpt && (
                           <p className="text-white/60 mb-4 line-clamp-3">{post.excerpt}</p>

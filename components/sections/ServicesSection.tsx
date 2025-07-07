@@ -42,9 +42,11 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <AnimatedText variant="slideUp" className="h2 gradient-text mb-4">
-            Expert Media Audit Services
-          </AnimatedText>
+          <h2 className="gradient-text mb-4 font-bebas">
+            <AnimatedText variant="slideUp">
+              Expert Media Audit Services
+            </AnimatedText>
+          </h2>
           <AnimatedText
             variant="fadeIn"
             delay={0.2}
@@ -69,7 +71,7 @@ export function ServicesSection() {
                 >
                   <service.icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-2xl font-bebas mb-3 text-gray-900 dark:text-white">{service.title}</h3>
+                <h3 className="font-bebas mb-3 text-gray-900 dark:text-white">{service.title}</h3>
                 <p className="text-gray-600 dark:text-white/60">{service.description}</p>
               </Card>
             </motion.div>
