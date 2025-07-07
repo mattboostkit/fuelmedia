@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     question: 'What sets Fuel Media apart?',
-    answer: 'Our combination of data-driven strategies, creative excellence, and relentless innovation creates explosive results that traditional agencies can't match.',
+    answer: 'Our combination of data-driven strategies, creative excellence, and relentless innovation creates explosive results that traditional agencies can\'t match.',
   },
 ]
 
