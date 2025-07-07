@@ -41,7 +41,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-white/60 mb-6 max-w-sm">
-              Igniting brands with disruptive digital strategies and flame-powered creativity.
+              Expert media audit specialists delivering transparency, accountability, and commercial excellence.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -116,7 +116,7 @@ export function Footer() {
               © {new Date().getFullYear()} Fuel Media & Marketing. All rights reserved.
             </p>
             <div className="flex gap-6">
-              {footerLinks.legal.map((link) => (
+              {footerLinks.legal.length > 0 && footerLinks.legal.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
