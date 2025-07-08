@@ -43,7 +43,7 @@ export function HeroSection() {
             delay={0.6}
             className="text-xl md:text-2xl text-gray-600 dark:text-white/80 mb-8 max-w-3xl mx-auto"
           >
-            Expert media auditing that delivers commercial advantage through strategic insight, negotiation excellence, and performance optimization
+            Expert media auditing that delivers commercial advantage through strategic insight, negotiation excellence, and performance optimisation
           </AnimatedText>
 
           <motion.div

@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import { Button } from './Button'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
@@ -65,9 +64,6 @@ export function Navigation() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-flame-orange to-flame-red group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
-            <Button variant="flame" size="sm">
-              Get Started
-            </Button>
           </div>
 
           <button
@@ -99,9 +95,6 @@ export function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Button variant="flame" size="sm" className="mt-4 w-full">
-                Get Started
-              </Button>
             </div>
           </motion.div>
         )}

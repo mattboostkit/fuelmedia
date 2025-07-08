@@ -4,22 +4,42 @@ import { client } from '@/sanity/lib/client'
 import { postQuery, postsQuery } from '@/sanity/lib/queries'
 import { BlogPostContent } from '@/components/sections/BlogPostContent'
 import { BlogPost } from '@/types/sanity'
+import { mockBlogPost, mockPosts } from '@/lib/mockData'
 
 export const revalidate = 60
 
 export async function generateStaticParams() {
-  const posts = await client.fetch(postsQuery)
-  return posts.map((post: BlogPost) => ({
-    slug: post.slug.current,
-  }))
+  try {
+    const posts = await client.fetch(postsQuery)
+    const allPosts = posts.length > 0 ? posts : mockPosts
+    return allPosts.map((post: BlogPost) => ({
+      slug: post.slug.current,
+    }))
+  } catch (error) {
+    console.error('Error generating static params:', error)
+    return mockPosts.map((post: BlogPost) => ({
+      slug: post.slug.current,
+    }))
+  }
 }
 
 async function getPost(slug: string) {
   try {
     const post = await client.fetch(postQuery, { slug })
-    return post
+    if (post) return post
+    
+    // Fallback to mock data for development
+    if (slug === mockBlogPost.slug.current) {
+      return mockBlogPost
+    }
+    
+    return null
   } catch (error) {
     console.error('Error fetching post:', error)
+    // Fallback to mock data for development
+    if (slug === mockBlogPost.slug.current) {
+      return mockBlogPost
+    }
     return null
   }
 }
