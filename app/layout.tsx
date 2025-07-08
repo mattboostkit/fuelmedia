@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
-import { Navigation, Footer } from "@/components/ui";
+import { Navigation, Footer, GoogleAnalytics } from "@/components/ui";
 import { DarkModeToggle } from "@/components/ui/DarkModeToggle";
 
 const inter = Inter({
@@ -81,6 +81,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
+        
+        {/* Google Analytics */}
+        <GoogleAnalytics />
       </head>
       <body
         className={`${inter.variable} ${bebas.variable} antialiased`}
