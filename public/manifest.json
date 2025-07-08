@@ -1,0 +1,19 @@
+{
+  "name": "Fuel Media & Marketing",
+  "short_name": "Fuel Media",
+  "description": "Expert Media Audit Specialists - Transform your media investment with strategic audits and negotiations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "marketing", "professional"],
+  "lang": "en-GB"
+} 

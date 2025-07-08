@@ -18,7 +18,7 @@ const differentiators = [
   {
     icon: Handshake,
     title: 'Relationship-First',
-    description: 'We maximize agency partnerships through collaboration, not confrontation, delivering better outcomes.',
+    description: 'We maximise agency partnerships through collaboration, not confrontation, delivering better outcomes.',
   },
   {
     icon: Leaf,

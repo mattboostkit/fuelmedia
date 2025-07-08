@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import { Button } from './Button'
-import { Linkedin, Mail } from 'lucide-react'
+import { Linkedin } from 'lucide-react'
 
 const footerLinks = {
   company: [
@@ -89,25 +88,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-bebas text-xl mb-4 text-white">Newsletter</h3>
-            <p className="text-white/60 mb-4">
-              Stay updated with our latest insights and strategies.
-            </p>
-            <form className="space-y-3">
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-flame-orange transition-colors"
-                />
-                <Mail className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40" size={20} />
-              </div>
-              <Button variant="flame" size="sm" className="w-full">
-                Subscribe
-              </Button>
-            </form>
-          </div>
+          {/* Remove the entire Newsletter section (heading, description, form) from the footer. */}
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10">

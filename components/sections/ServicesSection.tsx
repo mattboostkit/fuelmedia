@@ -8,7 +8,7 @@ const services = [
   {
     icon: FileSearch,
     title: 'Media Audits',
-    description: 'Comprehensive financial media audits that uncover inefficiencies, optimize contracts, and deliver significant commercial improvements.',
+    description: 'Comprehensive financial media audits that uncover inefficiencies, optimise contracts, and deliver significant commercial improvements.',
     gradient: 'from-primary to-secondary-pink',
   },
   {
@@ -20,7 +20,7 @@ const services = [
   {
     icon: Shield,
     title: 'Contract Negotiations',
-    description: 'Strategic negotiation expertise that secures better terms, protects your interests, and maximizes media investment value.',
+    description: 'Strategic negotiation expertise that secures better terms, protects your interests, and maximises media investment value.',
     gradient: 'from-secondary-blue to-secondary-pink',
   },
   {

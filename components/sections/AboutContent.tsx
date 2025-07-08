@@ -42,7 +42,7 @@ const values = [
   {
     icon: Rocket,
     title: 'Commercial Excellence',
-    description: 'Over £710M saved through expert negotiations, contract optimization, and strategic media planning that maximizes every pound invested.',
+    description: 'Over £710M saved through expert negotiations, contract optimisation, and strategic media planning that maximises every pound invested.',
   },
   {
     icon: Users,
@@ -90,7 +90,7 @@ const fallbackTeamData: TeamMember[] = [
     image: undefined,
     bio: [
       'John is a seasoned media professional and partner at Fuel Media and Marketing, bringing three decades of international experience in senior management roles at IPG and major media consultancies.',
-      'Renowned as a go-to subject matter expert in modern media trading, John specialises in improving transparency at the client/agency interface. His deep understanding of this relationship helps both parties thrive through optimized targets and margin management. John\'s unique ability to navigate local media trading nuances within international norms sets him apart.',
+      'Renowned as a go-to subject matter expert in modern media trading, John specialises in improving transparency at the client/agency interface. His deep understanding of this relationship helps both parties thrive through optimised targets and margin management. John\'s unique ability to navigate local media trading nuances within international norms sets him apart.',
       'With extensive experience in major media trading, John has developed a keen focus on digital communications. He leverages the measurability and real-time tracking capabilities of digital to drive results. Alongside Fuel\'s team of digital engineers, John positions the firm as a digital-first consultancy.'
     ],
     personalNote: 'A former elite athlete, John maintains an active lifestyle through cycling and regular gym sessions when away from the office.',
@@ -239,12 +239,12 @@ export function AboutContent() {
               <Card className="h-full">
                 <h3 className="font-bebas mb-4 gradient-text">Financial Auditing</h3>
                 <p className="text-gray-600 dark:text-white/60 mb-4">
-                  Comprehensive review of media spend, contract terms, and agency fees. We analyze 
+                  Comprehensive review of media spend, contract terms, and agency fees. We analyse 
                   every pound to ensure maximum value and identify savings opportunities.
                 </p>
                 <ul className="space-y-2 text-gray-600 dark:text-white/60">
                   <li>• Contract compliance verification</li>
-                  <li>• Fee structure optimization</li>
+                  <li>• Fee structure optimisation</li>
                   <li>• Rebate and AVB recovery</li>
                   <li>• Benchmark analysis</li>
                 </ul>
@@ -260,12 +260,12 @@ export function AboutContent() {
               <Card className="h-full">
                 <h3 className="font-bebas mb-4 gradient-text">Performance Review</h3>
                 <p className="text-gray-600 dark:text-white/60 mb-4">
-                  Data-driven analysis of campaign effectiveness, media mix optimization, and 
+                  Data-driven analysis of campaign effectiveness, media mix optimisation, and 
                   strategic recommendations for improved ROI.
                 </p>
                 <ul className="space-y-2 text-gray-600 dark:text-white/60">
                   <li>• Campaign effectiveness analysis</li>
-                  <li>• Media mix modeling</li>
+                  <li>• Media mix modelling</li>
                   <li>• Attribution assessment</li>
                   <li>• Strategic recommendations</li>
                 </ul>
@@ -288,7 +288,7 @@ export function AboutContent() {
                   <li>• Brief development</li>
                   <li>• Agency evaluation</li>
                   <li>• Negotiation support</li>
-                  <li>• Contract finalization</li>
+                  <li>• Contract finalisation</li>
                 </ul>
               </Card>
             </motion.div>

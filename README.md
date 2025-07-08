@@ -37,7 +37,10 @@ Create a `.env.local` file with:
 ```
 NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
 NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2025-07-07
 ```
+
+**Note**: You'll need to replace `your_project_id` with your actual Sanity project ID. If you don't have one, you can create a free account at [sanity.io](https://sanity.io).
 
 4. Run the development server:
 ```bash

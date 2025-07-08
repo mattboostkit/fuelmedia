@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fuelmedia.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /studio/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow important pages
+Allow: /about/
+Allow: /blog/
+Allow: /contact/
+Allow: /partnerships/ 
