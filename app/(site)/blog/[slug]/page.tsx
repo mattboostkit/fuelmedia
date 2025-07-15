@@ -4,7 +4,7 @@ import { client } from '@/sanity/lib/client'
 import { postQuery, postsQuery } from '@/sanity/lib/queries'
 import { BlogPostContent } from '@/components/sections/BlogPostContent'
 import { BlogPost } from '@/types/sanity'
-import { mockBlogPost, mockPosts } from '@/lib/mockData'
+import { mockPosts } from '@/lib/mockData'
 
 export const revalidate = 60
 
@@ -29,16 +29,18 @@ async function getPost(slug: string) {
     if (post) return post
     
     // Fallback to mock data for development
-    if (slug === mockBlogPost.slug.current) {
-      return mockBlogPost
+    const mockPost = mockPosts.find(post => post.slug.current === slug)
+    if (mockPost) {
+      return mockPost
     }
     
     return null
   } catch (error) {
     console.error('Error fetching post:', error)
     // Fallback to mock data for development
-    if (slug === mockBlogPost.slug.current) {
-      return mockBlogPost
+    const mockPost = mockPosts.find(post => post.slug.current === slug)
+    if (mockPost) {
+      return mockPost
     }
     return null
   }

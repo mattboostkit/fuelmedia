@@ -15,7 +15,13 @@
       "Bash(git push:*)",
       "Bash(cat:*)",
       "Bash(npm run build:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(cmd /c:*)",
+      "Bash(where git)",
+      "Bash(git-status.bat)",
+      "Bash(python:*)",
+      "Bash(del nul)",
+      "Bash(del \"\\?\\C:\\Dev\\Cascade\\fuelmedia\\nul\")"
     ],
     "deny": []
   }

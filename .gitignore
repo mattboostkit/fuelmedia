@@ -39,3 +39,27 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# debug and test files
+git-*.txt
+git-*.bat
+git-*.ps1
+git_*.py
+add*.txt
+commit-*.txt
+test-*.txt
+*-output.txt
+*-result.txt
+
+# Windows reserved names
+nul
+con
+prn
+aux
+com1
+com2
+com3
+com4
+lpt1
+lpt2
+lpt3
