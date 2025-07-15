@@ -111,10 +111,10 @@ export function ServicesSection() {
             Discover how our expert services can save you 20-30% on media spend whilst improving campaign performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg">
               <Link href="/services">View All Services</Link>
             </Button>
-            <Button size="lg" variant="ghost" asChild>
+            <Button size="lg" variant="ghost">
               <Link href="/contact">Schedule Free Consultation</Link>
             </Button>
           </div>

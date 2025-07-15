@@ -130,7 +130,7 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
                     
-                    <Button asChild>
+                    <Button>
                       <Link href={study.link}>Read Full Case Study</Link>
                     </Button>
                   </div>
@@ -170,10 +170,10 @@ export default function CaseStudiesPage() {
                 Join the UK's leading advertisers who trust Fuel Media to optimise their media spend.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
+                <Button size="lg">
                   <Link href="/contact">Start Your Success Story</Link>
                 </Button>
-                <Button size="lg" variant="ghost" asChild>
+                <Button size="lg" variant="ghost">
                   <Link href="/services">Explore Our Services</Link>
                 </Button>
               </div>

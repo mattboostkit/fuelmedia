@@ -171,7 +171,7 @@ export default function LocationsPage() {
                     </ul>
                   </div>
                   
-                  <Button asChild className="w-full">
+                  <ButtonclassName="w-full">
                     <Link href={`/locations/${location.slug}`}>
                       View {location.city} Office
                     </Link>
@@ -208,10 +208,10 @@ export default function LocationsPage() {
                 Contact your nearest office for a free consultation on optimising your media investment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
+                <Button size="lg">
                   <Link href="/contact">Schedule a Consultation</Link>
                 </Button>
-                <Button size="lg" variant="ghost" asChild>
+                <Button size="lg" variant="ghost">
                   <Link href="/services">Explore Our Services</Link>
                 </Button>
               </div>

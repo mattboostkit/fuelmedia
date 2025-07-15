@@ -83,7 +83,7 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-                    <Button asChild className="w-full">
+                    <ButtonclassName="w-full">
                       <Link href={service.link}>Learn More</Link>
                     </Button>
                   </div>
@@ -152,10 +152,10 @@ export default function ServicesPage() {
                 Contact us today for a free consultation and discover how much you could be saving.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
+                <Button size="lg">
                   <Link href="/contact">Get Started Today</Link>
                 </Button>
-                <Button size="lg" variant="ghost" asChild>
+                <Button size="lg" variant="ghost">
                   <Link href="/case-studies">View Client Success Stories</Link>
                 </Button>
               </div>
