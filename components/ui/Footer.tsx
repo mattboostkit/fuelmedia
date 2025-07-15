@@ -16,13 +16,6 @@ const footerLinks = {
     { href: '/services/contract-negotiation', label: 'Contract Negotiations' },
     { href: '/services/performance-review', label: 'Performance Reviews' },
   ],
-  locations: [
-    { href: '/locations/london', label: 'London' },
-    { href: '/locations/manchester', label: 'Manchester' },
-    { href: '/locations/birmingham', label: 'Birmingham' },
-    { href: '/locations/edinburgh', label: 'Edinburgh' },
-    { href: '/locations/leeds', label: 'Leeds' },
-  ],
   legal: [] as Array<{ href: string; label: string }>,
 }
 
@@ -30,7 +23,7 @@ export function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
             <div className="mb-6 flex items-center">
               <Image
@@ -101,21 +94,6 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-bebas text-xl mb-4 text-white">Locations</h3>
-            <ul className="space-y-2">
-              {footerLinks.locations.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-white/60 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10">

@@ -20,7 +20,6 @@ const navLinks = [
       { href: '/services/performance-review', label: 'Performance Review' },
     ]
   },
-  { href: '/locations', label: 'Locations' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/partnerships', label: 'Partnerships' },
   { href: '/blog', label: 'Blog' },
