@@ -271,12 +271,8 @@ export default function RetailMediaAuditPage() {
                 Discover how much you could be saving with a comprehensive media audit from Fuel Media.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <Link href="/contact">Get Your Free Consultation</Link>
-                </Button>
-                <Button size="lg" variant="ghost" asChild>
-                  <Link href="/case-studies">View More Case Studies</Link>
-                </Button>
+                <Button size="lg" asChild><Link href="/contact">Get Your Free Consultation</Link></Button>
+                <Button size="lg" variant="ghost" asChild><Link href="/case-studies">View More Case Studies</Link></Button>
               </div>
             </div>
           </div>

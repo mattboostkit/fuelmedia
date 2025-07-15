@@ -274,12 +274,8 @@ export default function BirminghamPage() {
                 Join 150+ Midlands businesses that have revolutionised their advertising effectiveness with our expert audit services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <Link href="/contact">Book Your Free Birmingham Consultation</Link>
-                </Button>
-                <Button size="lg" variant="ghost" asChild>
-                  <Link href="/services">View Our Services</Link>
-                </Button>
+                <Button size="lg" asChild><Link href="/contact">Book Your Free Birmingham Consultation</Link></Button>
+                <Button size="lg" variant="ghost" asChild><Link href="/services">View Our Services</Link></Button>
               </div>
             </div>
           </div>

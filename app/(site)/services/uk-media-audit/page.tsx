@@ -152,12 +152,8 @@ export default function UKMediaAuditPage() {
                 Schedule a free consultation to discover how much you could be saving on your UK media spend.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <Link href="/contact">Get Your Free UK Media Audit Consultation</Link>
-                </Button>
-                <Button size="lg" variant="ghost" asChild>
-                  <Link href="/case-studies">View UK Client Success Stories</Link>
-                </Button>
+                <Button size="lg" asChild><Link href="/contact">Get Your Free UK Media Audit Consultation</Link></Button>
+                <Button size="lg" variant="ghost" asChild><Link href="/case-studies">View UK Client Success Stories</Link></Button>
               </div>
             </div>
           </div>
