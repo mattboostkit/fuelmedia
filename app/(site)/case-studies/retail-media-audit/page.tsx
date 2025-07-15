@@ -274,7 +274,7 @@ export default function RetailMediaAuditPage() {
                 <Button size="lg" asChild>
                   <Link href="/contact">Get Your Free Consultation</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="ghost" asChild>
                   <Link href="/case-studies">View More Case Studies</Link>
                 </Button>
               </div>

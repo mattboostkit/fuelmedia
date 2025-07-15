@@ -114,7 +114,7 @@ export function ServicesSection() {
             <Button size="lg" asChild>
               <Link href="/services">View All Services</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="ghost" asChild>
               <Link href="/contact">Schedule Free Consultation</Link>
             </Button>
           </div>

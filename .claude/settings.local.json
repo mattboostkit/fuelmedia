@@ -21,7 +21,9 @@
       "Bash(git-status.bat)",
       "Bash(python:*)",
       "Bash(del nul)",
-      "Bash(del \"\\?\\C:\\Dev\\Cascade\\fuelmedia\\nul\")"
+      "Bash(del \"\\?\\C:\\Dev\\Cascade\\fuelmedia\\nul\")",
+      "WebFetch(domain:github.com)",
+      "Bash(npm install:*)"
     ],
     "deny": []
   }

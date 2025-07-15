@@ -199,7 +199,7 @@ export default function ContractNegotiationPage() {
                   <span>Identify quick win opportunities</span>
                 </li>
               </ul>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="ghost" size="lg" asChild>
                 <Link href="/contact">Get Your Free Contract Review</Link>
               </Button>
             </div>
@@ -213,7 +213,7 @@ export default function ContractNegotiationPage() {
                 <Button size="lg" asChild>
                   <Link href="/contact">Start Saving Today</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="ghost" asChild>
                   <Link href="/case-studies">View Negotiation Success Stories</Link>
                 </Button>
               </div>

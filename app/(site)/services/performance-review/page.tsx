@@ -225,7 +225,7 @@ export default function PerformanceReviewPage() {
                 <Button size="lg" asChild>
                   <Link href="/contact">Book Your Performance Review</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="ghost" asChild>
                   <Link href="/case-studies">See Review Impact Stories</Link>
                 </Button>
               </div>

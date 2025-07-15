@@ -155,7 +155,7 @@ export default function UKMediaAuditPage() {
                 <Button size="lg" asChild>
                   <Link href="/contact">Get Your Free UK Media Audit Consultation</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="ghost" asChild>
                   <Link href="/case-studies">View UK Client Success Stories</Link>
                 </Button>
               </div>

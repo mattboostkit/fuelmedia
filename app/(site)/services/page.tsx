@@ -155,7 +155,7 @@ export default function ServicesPage() {
                 <Button size="lg" asChild>
                   <Link href="/contact">Get Started Today</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="ghost" asChild>
                   <Link href="/case-studies">View Client Success Stories</Link>
                 </Button>
               </div>

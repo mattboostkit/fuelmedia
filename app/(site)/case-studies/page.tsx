@@ -173,7 +173,7 @@ export default function CaseStudiesPage() {
                 <Button size="lg" asChild>
                   <Link href="/contact">Start Your Success Story</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="ghost" asChild>
                   <Link href="/services">Explore Our Services</Link>
                 </Button>
               </div>

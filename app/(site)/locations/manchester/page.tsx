@@ -277,7 +277,7 @@ export default function ManchesterPage() {
                 <Button size="lg" asChild>
                   <Link href="/contact">Book Your Free Manchester Consultation</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="ghost" asChild>
                   <Link href="/services">Explore Our Services</Link>
                 </Button>
               </div>
