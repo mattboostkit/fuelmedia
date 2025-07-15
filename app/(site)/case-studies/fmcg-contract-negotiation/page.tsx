@@ -359,8 +359,8 @@ export default function FMCGContractNegotiationPage() {
                 Discover how much you could save through strategic contract renegotiation with Fuel Media.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild><Link href="/contact">Get Your Contract Review</Link></Button>
-                <Button size="lg" variant="ghost" asChild><Link href="/case-studies">View More Case Studies</Link></Button>
+                <Button size="lg"><Link href="/contact">Get Your Contract Review</Link></Button>
+                <Button size="lg" variant="ghost"><Link href="/case-studies">View More Case Studies</Link></Button>
               </div>
             </div>
           </div>

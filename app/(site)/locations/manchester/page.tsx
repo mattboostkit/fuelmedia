@@ -274,8 +274,8 @@ export default function ManchesterPage() {
                 Join 180+ North West businesses that have transformed their advertising effectiveness with our local expertise.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild><Link href="/contact">Book Your Free Manchester Consultation</Link></Button>
-                <Button size="lg" variant="ghost" asChild><Link href="/services">Explore Our Services</Link></Button>
+                <Button size="lg"><Link href="/contact">Book Your Free Manchester Consultation</Link></Button>
+                <Button size="lg" variant="ghost"><Link href="/services">Explore Our Services</Link></Button>
               </div>
             </div>
           </div>

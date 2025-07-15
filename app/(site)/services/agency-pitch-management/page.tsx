@@ -177,8 +177,8 @@ export default function AgencyPitchManagementPage() {
                 Let our experts guide you through a successful agency selection process.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild><Link href="/contact">Start Your Agency Search</Link></Button>
-                <Button size="lg" variant="ghost" asChild><Link href="/case-studies">View Pitch Success Stories</Link></Button>
+                <Button size="lg"><Link href="/contact">Start Your Agency Search</Link></Button>
+                <Button size="lg" variant="ghost"><Link href="/case-studies">View Pitch Success Stories</Link></Button>
               </div>
             </div>
           </div>

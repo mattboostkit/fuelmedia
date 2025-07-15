@@ -274,8 +274,8 @@ export default function LeedsPage() {
                 Join 140+ Yorkshire businesses that have revolutionised their advertising effectiveness with our regional expertise.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild><Link href="/contact">Book Your Free Leeds Consultation</Link></Button>
-                <Button size="lg" variant="ghost" asChild><Link href="/services">View Our Services</Link></Button>
+                <Button size="lg"><Link href="/contact">Book Your Free Leeds Consultation</Link></Button>
+                <Button size="lg" variant="ghost"><Link href="/services">View Our Services</Link></Button>
               </div>
             </div>
           </div>

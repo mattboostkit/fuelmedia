@@ -199,7 +199,7 @@ export default function ContractNegotiationPage() {
                   <span>Identify quick win opportunities</span>
                 </li>
               </ul>
-              <Button variant="ghost" size="lg" asChild><Link href="/contact">Get Your Free Contract Review</Link></Button>
+              <Button variant="ghost" size="lg"><Link href="/contact">Get Your Free Contract Review</Link></Button>
             </div>
 
             <div className="text-center">
@@ -208,8 +208,8 @@ export default function ContractNegotiationPage() {
                 Let our negotiation experts secure better terms and stronger protections for your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild><Link href="/contact">Start Saving Today</Link></Button>
-                <Button size="lg" variant="ghost" asChild><Link href="/case-studies">View Negotiation Success Stories</Link></Button>
+                <Button size="lg"><Link href="/contact">Start Saving Today</Link></Button>
+                <Button size="lg" variant="ghost"><Link href="/case-studies">View Negotiation Success Stories</Link></Button>
               </div>
             </div>
           </div>

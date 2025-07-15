@@ -222,8 +222,8 @@ export default function PerformanceReviewPage() {
                 Schedule a consultation to discuss how regular performance reviews can drive better results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild><Link href="/contact">Book Your Performance Review</Link></Button>
-                <Button size="lg" variant="ghost" asChild><Link href="/case-studies">See Review Impact Stories</Link></Button>
+                <Button size="lg"><Link href="/contact">Book Your Performance Review</Link></Button>
+                <Button size="lg" variant="ghost"><Link href="/case-studies">See Review Impact Stories</Link></Button>
               </div>
             </div>
           </div>
