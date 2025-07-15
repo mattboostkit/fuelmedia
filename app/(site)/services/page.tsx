@@ -83,7 +83,7 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-                    <ButtonclassName="w-full">
+                    <Button className="w-full">
                       <Link href={service.link}>Learn More</Link>
                     </Button>
                   </div>

@@ -171,7 +171,7 @@ export default function LocationsPage() {
                     </ul>
                   </div>
                   
-                  <ButtonclassName="w-full">
+                  <Button className="w-full">
                     <Link href={`/locations/${location.slug}`}>
                       View {location.city} Office
                     </Link>
