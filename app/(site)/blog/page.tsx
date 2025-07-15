@@ -5,8 +5,13 @@ import { BlogContent } from '@/components/sections/BlogContent'
 import { mockPosts, mockCategories } from '@/lib/mockData'
 
 export const metadata: Metadata = {
-  title: 'Blog - Fuel Media & Marketing',
-  description: 'Insights, trends, and strategies from the Fuel Media & Marketing team.',
+  title: 'UK Media Audit Blog | Industry Insights & Cost-Saving Tips | Fuel Media',
+  description: 'Expert insights on UK media auditing, agency management, and advertising optimization. Learn how to save 20-30% on media spend with proven strategies from industry leaders.',
+  keywords: ['UK media audit blog', 'advertising cost reduction', 'media buying tips', 'agency management insights', 'UK advertising trends', 'media spend optimization'],
+  openGraph: {
+    title: 'Fuel Media Blog - UK Media Audit Insights & Strategies',
+    description: 'Stay ahead with expert insights on media auditing, agency performance, and cost optimization. Trusted by UK\'s leading advertisers.',
+  }
 }
 
 export const revalidate = 60

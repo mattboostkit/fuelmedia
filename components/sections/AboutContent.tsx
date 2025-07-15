@@ -9,6 +9,7 @@ import { client, urlFor } from '@/sanity/lib/client'
 import { teamQuery } from '@/sanity/lib/queries'
 import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
+import { TrustSignals } from '@/components/sections/TrustSignals'
 
 interface TeamMember {
   _id: string
@@ -409,6 +410,9 @@ export function AboutContent() {
           </div>
         </div>
       </section>
+
+      {/* Trust Signals Section */}
+      <TrustSignals />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary/10 via-secondary-pink/10 to-secondary-blue/10">

@@ -6,6 +6,7 @@ import {
   AboutSection,
   CTASection,
 } from '@/components/sections'
+import { Testimonials } from '@/components/sections/Testimonials'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <StatsSection />
+      <Testimonials />
       <CTASection />
     </>
   )

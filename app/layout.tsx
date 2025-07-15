@@ -3,6 +3,7 @@ import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { Navigation, Footer, GoogleAnalytics } from "@/components/ui";
 import { DarkModeToggle } from "@/components/ui/DarkModeToggle";
+import { StructuredData, organizationSchema, serviceSchema, localBusinessSchema } from "@/components/StructuredData";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -82,8 +83,21 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
         
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://ik.imagekit.io" />
+        <link rel="preconnect" href="https://cdn.sanity.io" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://ik.imagekit.io" />
+        
         {/* Google Analytics */}
         <GoogleAnalytics />
+        
+        {/* Structured Data */}
+        <StructuredData data={organizationSchema} />
+        <StructuredData data={serviceSchema} />
+        <StructuredData data={localBusinessSchema} />
       </head>
       <body
         className={`${inter.variable} ${bebas.variable} antialiased`}

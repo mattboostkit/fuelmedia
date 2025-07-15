@@ -68,13 +68,23 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% 200%;
-    animation: gradient 3s ease infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .gradient-text {
+      animation: gradient 3s ease infinite;
+    }
   }
 
   .gradient-bg {
     background: linear-gradient(to right, theme('colors.primary.DEFAULT'), theme('colors.secondary.blue'), theme('colors.secondary.pink'));
     background-size: 200% 200%;
-    animation: gradient 3s ease infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .gradient-bg {
+      animation: gradient 3s ease infinite;
+    }
   }
 
   .flame-shadow {

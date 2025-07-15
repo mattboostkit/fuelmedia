@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Linkedin } from 'lucide-react'
 
 const footerLinks = {
@@ -7,12 +8,20 @@ const footerLinks = {
     { href: '/partnerships', label: 'Partnerships' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
+    { href: '/faq', label: 'FAQs' },
   ],
   services: [
-    { href: '/#services', label: 'Media Audits' },
-    { href: '/#services', label: 'Agency Pitches' },
-    { href: '/#services', label: 'Contract Negotiations' },
-    { href: '/#services', label: 'Performance Reviews' },
+    { href: '/services/uk-media-audit', label: 'Media Audits' },
+    { href: '/services/agency-pitch-management', label: 'Agency Pitches' },
+    { href: '/services/contract-negotiation', label: 'Contract Negotiations' },
+    { href: '/services/performance-review', label: 'Performance Reviews' },
+  ],
+  locations: [
+    { href: '/locations/london', label: 'London' },
+    { href: '/locations/manchester', label: 'Manchester' },
+    { href: '/locations/birmingham', label: 'Birmingham' },
+    { href: '/locations/edinburgh', label: 'Edinburgh' },
+    { href: '/locations/leeds', label: 'Leeds' },
   ],
   legal: [] as Array<{ href: string; label: string }>,
 }
@@ -24,14 +33,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
             <div className="mb-6 flex items-center">
-              <img
+              <Image
                 src="https://ik.imagekit.io/boostkit/Fuel%20Media%20and%20Marketing/Fuel_Logo.svg?updatedAt=1751799590441"
-                alt="Fuel Media Logo"
+                alt="Fuel Media - UK Media Audit Specialists"
+                width={120}
+                height={40}
                 className="h-10 w-auto block dark:hidden"
               />
-              <img
+              <Image
                 src="https://ik.imagekit.io/boostkit/Fuel%20Media%20and%20Marketing/Logo_White_Fade%20(Large).png?updatedAt=1751799623208"
-                alt="Fuel Media Logo White"
+                alt="Fuel Media - UK Media Audit Specialists"
+                width={120}
+                height={40}
                 className="h-10 w-auto hidden dark:block"
               />
             </div>
@@ -88,7 +101,21 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Remove the entire Newsletter section (heading, description, form) from the footer. */}
+          <div>
+            <h3 className="font-bebas text-xl mb-4 text-white">Locations</h3>
+            <ul className="space-y-2">
+              {footerLinks.locations.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10">
