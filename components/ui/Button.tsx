@@ -3,6 +3,7 @@
 import { cn } from '@/lib/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 import { ButtonHTMLAttributes, forwardRef } from 'react'
+import { Slot } from '@radix-ui/react-slot'
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none',
@@ -31,18 +32,21 @@ interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   isLoading?: boolean
+  asChild?: boolean
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, isLoading, children, ...props }, ref) => {
+  ({ className, variant, size, isLoading, asChild = false, children, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'button'
+    
     return (
-      <button
+      <Comp
         ref={ref}
         className={cn(buttonVariants({ variant, size, className }))}
         disabled={isLoading}
         {...props}
       >
-        {variant === 'flame' && (
+        {variant === 'flame' && !asChild && (
           <div className="absolute inset-0 bg-gradient-to-r from-secondary-blue via-primary to-secondary-pink opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         )}
         <span className={cn(variant === 'flame' && 'relative z-10', isLoading && 'opacity-0')}>
@@ -53,7 +57,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
           </div>
         )}
-      </button>
+      </Comp>
     )
   }
 )
